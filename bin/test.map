@@ -1,0 +1,498 @@
+Archive member included because of file (symbol)
+
+/u0/wbcowan/cs452/io/lib/libbwio.a(bwio.o)
+                              ./obj/zx_kernel_body.o (bwprintf)
+/u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_udivsi3.o)
+                              ./obj/zx_system_calls.o (__udivsi3)
+/u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_divsi3.o)
+                              ./obj/zx_project_track_sensing.o (__divsi3)
+/u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_umodsi3.o)
+                              ./obj/zx_uart_io.o (__umodsi3)
+/u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_modsi3.o)
+                              ./obj/zx_queue.o (__modsi3)
+/u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_dvmd_tls.o)
+                              /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_udivsi3.o) (__div0)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ram              0x0000000000218000 0x0000000002000000
+rom              0x0000000060000000 0x0000000000800000
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+
+data            0x0000000000218000        0x0
+                0x0000000000218000                _DataStart = .
+ *(.data)
+                0x0000000000218000                _DataEnd = .
+
+bss             0x0000000000218000        0x0
+                0x0000000000218000                _BssStart = .
+ *(.bss)
+                0x0000000000218000                _BssEnd = .
+
+text            0x0000000000218000    0x281a4
+ *(.text)
+ .text          0x0000000000218000       0x84 ./obj/zx_kernel_head.o
+                0x0000000000218000                main
+ .text          0x0000000000218084      0xf6c ./obj/zx_kernel_body.o
+                0x0000000000218bb8                zx_get_next_request
+                0x0000000000218084                zx_kernel_init
+                0x0000000000218a4c                zx_get_closure_errors
+                0x0000000000218fdc                zx_idle
+                0x0000000000218edc                zx_restore_context
+                0x0000000000218fcc                truly_idle_
+                0x0000000000218674                zx_handle
+                0x0000000000218c54                zx_save_context_and_return_to_kernel
+ .text          0x0000000000218ff0      0xcb4 ./obj/zx_system_calls.o
+                0x0000000000219bbc                PutMultiple
+                0x0000000000219748                CloseNameServer
+                0x000000000021909c                Send
+                0x0000000000219074                MyParentTid
+                0x0000000000219b64                Kill
+                0x0000000000219024                Pass
+                0x0000000000219818                CloseClockServer
+                0x00000000002195dc                PutC
+                0x00000000002193cc                WhoIs
+                0x0000000000218ff0                Create
+                0x0000000000219184                AwaitEvent
+                0x00000000002190d8                Receive
+                0x0000000000219110                Reply
+                0x000000000021904c                MyTid
+                0x00000000002197b4                CreateClockServer
+                0x0000000000219038                Exit
+                0x0000000000219170                Free
+                0x0000000000219ac0                Shutdown
+                0x0000000000219318                DelayUntil
+                0x00000000002196e4                CreateNameServer
+                0x0000000000219990                CloseUARTServers
+                0x00000000002194c0                GetC
+                0x0000000000219444                RegisterAs
+                0x0000000000219b80                DebugManyArgs
+                0x0000000000219148                Alloc
+                0x00000000002191b4                Delay
+                0x0000000000219268                Time
+                0x0000000000219884                CreateUARTServers
+ .text          0x0000000000219ca4      0xe0c ./obj/zx_system_call_handlers.o
+                0x000000000021a74c                zx_shutdown
+                0x000000000021a5a8                zx_handle_hwi
+                0x0000000000219f84                zx_send
+                0x000000000021a1ac                zx_receive
+                0x0000000000219d5c                zx_create
+                0x0000000000219d10                zx_my_tid
+                0x000000000021a9a0                debug_many_args
+                0x0000000000219d2c                zx_exit
+                0x0000000000219ca4                zx_parent_tid
+                0x000000000021a47c                zx_await_event
+                0x000000000021a694                zx_kill
+                0x000000000021a7e4                zx_initialize_stack
+                0x000000000021a2ec                zx_reply
+ .text          0x000000000021aab0      0x560 ./obj/zx_ready_queue.o
+                0x000000000021acf0                zx_q_add_priority
+                0x000000000021aab0                zx_q_create_node
+                0x000000000021afe0                zx_q_get_head_addr
+                0x000000000021ac00                zx_q_append_to_penultimate
+                0x000000000021ab10                zx_q_append_to_end
+                0x000000000021adf8                zx_q_remove_node
+                0x000000000021af64                zx_q_free_node
+                0x000000000021aedc                zx_q_get_next_tid
+                0x000000000021ad4c                zx_q_remove_priority
+                0x000000000021afa0                zx_q_get_node
+                0x000000000021adac                zx_q_get_highest_priority
+ .text          0x000000000021b010      0x3bc ./obj/zx_memory.o
+                0x000000000021b11c                zx_free
+                0x000000000021b27c                debug_walk_heap
+                0x000000000021b360                zx_memset
+                0x000000000021b090                zx_alloc
+                0x000000000021b010                zx_memcpy
+                0x000000000021b1cc                zx_heap_create
+ .text          0x000000000021b3cc      0x9b8 ./obj/zx_helper.o
+                0x000000000021b58c                zx_get_active_td
+                0x000000000021b644                zx_count_trailing_zeros
+                0x000000000021bba0                debug_print_stack
+                0x000000000021bb10                debug_print_receive_queue
+                0x000000000021baa4                debug_print_list
+                0x000000000021bc88                zx_random
+                0x000000000021b3cc                find_next_bit_set
+                0x000000000021b610                zx_set_active_task_id
+                0x000000000021b4bc                zx_does_task_exist
+                0x000000000021b9bc                zx_set_bit_64
+                0x000000000021b448                zx_is_taskid_valid
+                0x000000000021b534                zx_get_td
+                0x000000000021b5f0                zx_get_active_task_id
+                0x000000000021bce8                zx_random_range
+                0x000000000021b740                zx_count_trailing_zeros_64
+ .text          0x000000000021bd84      0x2a0 ./obj/zx_receive_queue.o
+                0x000000000021bdf8                zx_receive_q_append_to_end
+                0x000000000021bfc4                zx_receive_q_get_tail_addr
+                0x000000000021bf4c                zx_receive_q_free_head
+                0x000000000021bff4                zx_receive_q_get_head_addr
+                0x000000000021be98                zx_receive_q_get_next_node
+                0x000000000021bf94                zx_receive_q_get_node
+                0x000000000021bd84                zx_receive_q_create_node
+ .text          0x000000000021c024     0x1f1c ./obj/zx_testing.o
+                0x000000000021c64c                ReplyMessageTo
+                0x000000000021d8b4                zx_first_user_task_kernel_4_a0
+                0x000000000021c784                ReceiveMessage
+                0x000000000021d414                print_difference
+                0x000000000021d764                zx_first_user_task_kernel_4
+                0x000000000021d898                zx_first_user_task_kernel_4_new
+                0x000000000021c4b4                SendMessageTo
+                0x000000000021c1b8                test2_other_task
+                0x000000000021c024                test1_other_task
+                0x000000000021c0a4                test1
+                0x000000000021d718                receive_from_uart1
+                0x000000000021c890                sender_task
+                0x000000000021cbb4                test4
+                0x000000000021d52c                zx_first_user_task_kernel_3
+                0x000000000021cc28                nameserver_task
+                0x000000000021c9a0                receiver_task
+                0x000000000021c238                test2
+                0x000000000021d28c                test_ns
+                0x000000000021d094                test5
+                0x000000000021d244                ns_test_task
+                0x000000000021c3c8                test3
+                0x000000000021d42c                zx_clock_client
+                0x000000000021d8f8                zx_first_user_task_queue_test
+                0x000000000021d108                heap_test
+ .text          0x000000000021df40      0x74c ./obj/zx_ns_tree.o
+                0x000000000021e5c4                right_right_rotation
+                0x000000000021e4e0                left_right_rotation
+                0x000000000021e3c8                zx_get_task_id_by_name
+                0x000000000021e2fc                zx_bst_find_height
+                0x000000000021e578                right_left_rotation
+                0x000000000021e06c                zx_insert_into_bst
+                0x000000000021e384                zx_bst_get_by_name
+                0x000000000021df40                zx_get_hash_value
+                0x000000000021dfe4                zx_bst_add_by_name
+                0x000000000021e1a4                Free_bst
+                0x000000000021e47c                zx_bst_get_diff
+                0x000000000021e22c                zx_bst_balancing
+                0x000000000021e610                debug_bst_traverse_postorder
+                0x000000000021e52c                left_left_rotation
+ .text          0x000000000021e68c      0x154 ./obj/zx_ns.o
+                0x000000000021e68c                zx_name_server
+ .text          0x000000000021e7e0      0x2f8 ./obj/zx_irq_vic.o
+                0x000000000021e86c                zx_vic_disable_interrupt
+                0x000000000021e840                zx_vic_enable_all_interrupts
+                0x000000000021e7e0                zx_reset_all_interrupts
+                0x000000000021e98c                zx_get_interrupt_source
+                0x000000000021e7fc                zx_vic_disable_all_interrupts
+                0x000000000021e8fc                zx_vic_enable_interrupt
+ .text          0x000000000021ead8      0x490 ./obj/zx_clock_server.o
+                0x000000000021ebb4                zx_clock_server
+                0x000000000021eef4                zx_empty_heap_and_notify_client_tasks
+                0x000000000021ead8                zx_clock_notifier
+ .text          0x000000000021ef68      0x6dc ./obj/zx_clockserver_heap.o
+                0x000000000021eff8                zx_clockserver_heap_insert
+                0x000000000021ef68                zx_clockserver_heap_init
+                0x000000000021f0d0                zx_clockserver_heap_remove
+                0x000000000021f540                zx_clockserver_heap_node_swap
+                0x000000000021f1a8                zx_clockserver_min_heapify_after_delete
+                0x000000000021f338                zx_clockserver_min_heapify_after_insert
+                0x000000000021f5b0                debug_print_clockserver_heap
+ .text          0x000000000021f644      0x418 ./obj/zx_timer.o
+                0x000000000021f644                zx_timer_load_val
+                0x000000000021f6d8                zx_timer_set_periodic
+                0x000000000021f860                zx_timer_enable
+                0x000000000021f90c                zx_timer_disable
+                0x000000000021f7ac                zx_timer_select_clock
+                0x000000000021f9c0                zx_timer_get_value
+ .text          0x000000000021fa5c      0x3e8 ./obj/zx_queue.o
+                0x000000000021fa5c                zx_queue_initialize
+                0x000000000021fddc                zx_queue_is_full
+                0x000000000021fb28                zx_queue_insert
+                0x000000000021fd90                zx_is_queue_empty
+                0x000000000021fc74                zx_queue_remove
+ .text          0x000000000021fe44      0x654 ./obj/zx_uart2_transmit_server.o
+                0x000000000021fe44                zx_uart2_tx_server
+                0x00000000002203a4                zx_uart2_tx_notifier
+ .text          0x0000000000220498      0x678 ./obj/zx_uart1_transmit_server.o
+                0x0000000000220498                zx_uart1_tx_server
+                0x0000000000220a14                zx_uart1_tx_notifier
+ .text          0x0000000000220b10      0xd48 ./obj/zx_uart_io.o
+                0x0000000000220bd8                zx_initialize_uart2
+                0x0000000000221130                zx_putw
+                0x0000000000221820                zx_printf
+                0x0000000000220c90                zx_print_number
+                0x0000000000221238                zx_a2d
+                0x00000000002210b4                zx_putstr
+                0x0000000000220fb4                zx_putx
+                0x00000000002213a4                zx_ui2a
+                0x00000000002214e8                zx_i2a
+                0x0000000000220f54                zx_c2x
+                0x000000000022154c                zx_format
+                0x0000000000220c20                zx_initialize_uart1
+                0x0000000000220f18                zx_putc
+                0x0000000000221034                zx_putr
+                0x0000000000220e70                zx_write_byte
+                0x00000000002212e0                zx_a2i
+                0x0000000000220b10                zx_setfifo
+                0x0000000000220dd0                zx_read_byte
+ .text          0x0000000000221858      0x594 ./obj/zx_uart2_receive_server.o
+                0x0000000000221934                zx_uart2_rx_server
+                0x0000000000221858                zx_uart2_rx_notifier
+ .text          0x0000000000221dec      0x594 ./obj/zx_uart1_receive_server.o
+                0x0000000000221ec8                zx_uart1_rx_server
+                0x0000000000221dec                zx_uart1_rx_notifier
+ .text          0x0000000000222380      0x9c0 ./obj/zx_irq_device.o
+                0x0000000000222404                zx_init_modem_intr
+                0x0000000000222380                zx_device_init
+                0x00000000002228b4                zx_handle_timer_interrupt
+                0x0000000000222994                zx_handle_uart1_transmit_interrupt
+                0x00000000002225d4                zx_device_intr_off
+                0x00000000002224bc                zx_device_intr_clear_all
+                0x0000000000222bbc                zx_handle_uart_interrupt
+                0x0000000000222744                zx_device_intr_on
+                0x00000000002224fc                zx_device_intr_clear
+                0x000000000022247c                zx_device_intr_disable_all
+ .text          0x0000000000222d40      0x7cc ./obj/zx_project_graphics.o
+                0x0000000000222ff0                zx_draw_h_line
+                0x0000000000222f20                zx_clear_screen
+                0x00000000002232cc                zx_put_number
+                0x00000000002230a0                zx_erase_line
+                0x000000000022314c                zx_erase_from_current_to_scrend
+                0x00000000002231f8                zx_initialize_prompt
+                0x0000000000222d40                zx_set_cursor
+                0x0000000000223480                zx_put_string
+ .text          0x000000000022350c      0x924 ./obj/zx_project_utilities.o
+                0x0000000000223554                print_prompt
+                0x000000000022387c                node_name_to_id
+                0x00000000002235d4                num_to_string
+                0x0000000000223af8                process_command
+                0x000000000022350c                add_byte_to_buff
+                0x0000000000223790                strcmp
+                0x0000000000223970                find_command_value
+                0x0000000000223718                atoi
+                0x0000000000223d70                zx_a0_print_error_message
+ .text          0x0000000000223e30     0x343c ./obj/zx_project_track_sensing.o
+                0x0000000000223e30                absolute
+                0x000000000022703c                acceleration_profile_testing
+                0x0000000000223e78                zx_route_task
+                0x0000000000223f38                zx_train_controller_task
+ .text          0x000000000022726c     0xf5e0 ./obj/zx_project_track_data.o
+                0x000000000022ee88                init_trackb
+                0x000000000022726c                init_tracka
+ .text          0x000000000023684c     0x1328 ./obj/zx_project_shortest_path.o
+                0x0000000000236b90                zx_get_edges_waypoints_turnouts
+                0x000000000023684c                track_calc_shortest_path_from_two_dest
+                0x0000000000237aac                find_shortest_distance_node
+                0x00000000002371fc                zx_shortest_path
+ .text          0x0000000000237b74      0x398 ./obj/zx_project_calibration.o
+                0x0000000000237c28                train_calc_deccelerating_delay
+                0x0000000000237d18                train_find_velocity_and_distance_in_delta
+                0x0000000000237ca0                train_calc_accelerating_delay
+                0x0000000000237b74                train_get_stopping_delay
+ .text          0x0000000000237f0c     0x1fa4 ./obj/zx_project_train_functions.o
+                0x0000000000238780                train_commit_reverse
+                0x00000000002390c8                train_update_vertices_by_distance_traveled
+                0x0000000000238f94                train_get_run_speed_from_distance
+                0x0000000000239998                train_adjust_position_by_sensor_toggle
+                0x0000000000237f0c                train_init
+                0x00000000002394fc                train_next_waypoint
+                0x0000000000238840                train_commit
+                0x000000000023890c                train_set_speed
+                0x000000000023971c                train_update_edges
+                0x0000000000239028                train_stop_task
+                0x0000000000238a40                train_update_velocity_and_offset
+                0x0000000000238bd0                train_update_expected_sensors_rec
+                0x0000000000238e64                train_update_expected_sensors
+                0x000000000023934c                train_reverse
+                0x0000000000239880                train_sensor_search_rec
+                0x0000000000239d1c                train_calibrate_velocity
+ .text          0x0000000000239eb0     0x217c ./obj/zx_project_ui.o
+                0x000000000023a2fc                zx_print_success_message
+                0x000000000023b8dc                zx_command_task
+                0x000000000023b794                ui_print_initial_screen
+                0x000000000023b52c                ui_print_data
+                0x000000000023beec                zx_ui_server_task
+                0x000000000023a3d4                train_ui_print_data
+                0x0000000000239eb0                train_ui_print_initial_screen
+                0x000000000023a23c                zx_print_error_message
+ .text          0x000000000023c02c      0x4f8 ./obj/zx_project_track_functions.o
+                0x000000000023c2c4                turnout_commit
+                0x000000000023c434                turnout_init
+                0x000000000023c3e8                turnout_toggle
+                0x000000000023c02c                track_init
+ .text          0x000000000023c524      0x510 ./obj/zx_project_sensor.o
+                0x000000000023c938                zx_sensor_secretary_task
+                0x000000000023c524                zx_track_sensor_task
+                0x000000000023c750                zx_sensor_courier_task
+ .text          0x000000000023ca34      0xa8c ./obj/zx_project_path_reservation.o
+                0x000000000023ca34                reserve_path
+                0x000000000023d308                commit_current_reservation
+                0x000000000023d410                get_next_edge
+                0x000000000023d0d0                unreserve_previous_reservation
+                0x000000000023cce8                reserve_edge
+                0x000000000023d19c                check_reservation_status
+ .text          0x000000000023d4c0      0x64c ./obj/zx_project_test_functions.o
+                0x000000000023d4c0                reservation_testing
+ .text          0x000000000023db0c      0xc54 /u0/wbcowan/cs452/io/lib/libbwio.a(bwio.o)
+                0x000000000023de84                bwputr
+                0x000000000023e3f0                bwi2a
+                0x000000000023db0c                bwsetfifo
+                0x000000000023dce0                bwputc
+                0x000000000023e140                bwa2d
+                0x000000000023dbd4                bwsetspeed
+                0x000000000023dda4                c2x
+                0x000000000023e1e8                bwa2i
+                0x000000000023e088                bwgetc
+                0x000000000023e2ac                bwui2a
+                0x000000000023e454                bwformat
+                0x000000000023df80                bwputw
+                0x000000000023e728                bwprintf
+                0x000000000023de04                bwputx
+                0x000000000023df04                bwputstr
+ .text          0x000000000023e760      0x110 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_udivsi3.o)
+                0x000000000023e760                __udivsi3
+                0x000000000023e858                __aeabi_uidivmod
+ .text          0x000000000023e870      0x140 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_divsi3.o)
+                0x000000000023e870                __divsi3
+                0x000000000023e998                __aeabi_idivmod
+ .text          0x000000000023e9b0       0xcc /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_umodsi3.o)
+                0x000000000023e9b0                __umodsi3
+ .text          0x000000000023ea7c       0xe4 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_modsi3.o)
+                0x000000000023ea7c                __modsi3
+ .text          0x000000000023eb60        0x4 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_dvmd_tls.o)
+                0x000000000023eb60                __aeabi_ldiv0
+                0x000000000023eb60                __div0
+                0x000000000023eb60                __aeabi_idiv0
+ *(.got)
+ .got           0x000000000023eb64       0x88 ./obj/zx_kernel_body.o
+ *(.got.plt)
+ .got.plt       0x000000000023ebec        0xc ./obj/zx_kernel_body.o
+                0x000000000023ebec                _GLOBAL_OFFSET_TABLE_
+ *(.rodata)
+ .rodata        0x000000000023ebf8       0xc4 ./obj/zx_kernel_body.o
+ .rodata        0x000000000023ecbc       0x84 ./obj/zx_system_call_handlers.o
+ .rodata        0x000000000023ed40       0x78 ./obj/zx_memory.o
+ .rodata        0x000000000023edb8       0xb8 ./obj/zx_helper.o
+ .rodata        0x000000000023ee70      0x894 ./obj/zx_testing.o
+ .rodata        0x000000000023f704       0x14 ./obj/zx_ns_tree.o
+ .rodata        0x000000000023f718       0x10 ./obj/zx_clock_server.o
+ .rodata        0x000000000023f728       0x7c ./obj/zx_clockserver_heap.o
+ .rodata        0x000000000023f7a4       0x14 ./obj/zx_uart2_transmit_server.o
+ .rodata        0x000000000023f7b8       0x14 ./obj/zx_uart1_transmit_server.o
+ .rodata        0x000000000023f7cc       0x70 ./obj/zx_uart2_receive_server.o
+ .rodata        0x000000000023f83c       0x70 ./obj/zx_uart1_receive_server.o
+ .rodata        0x000000000023f8ac       0x24 ./obj/zx_project_utilities.o
+ .rodata        0x000000000023f8d0       0xd0 ./obj/zx_project_track_sensing.o
+ .rodata        0x000000000023f9a0      0x2b0 ./obj/zx_project_track_data.o
+ .rodata        0x000000000023fc50       0x14 ./obj/zx_project_shortest_path.o
+ .rodata        0x000000000023fc64      0x478 ./obj/zx_project_ui.o
+ .rodata        0x00000000002400dc       0x10 ./obj/zx_project_sensor.o
+ .rodata        0x00000000002400ec       0xb8 ./obj/zx_project_test_functions.o
+ *(.glue_7)
+ *(.glue_7t)
+
+.rel.dyn
+LOAD zx_milestone_2_track_b.elf
+LOAD ./obj/zx_kernel_head.o
+LOAD ./obj/zx_kernel_body.o
+LOAD ./obj/zx_system_calls.o
+LOAD ./obj/zx_system_call_handlers.o
+LOAD ./obj/zx_ready_queue.o
+LOAD ./obj/zx_memory.o
+LOAD ./obj/zx_helper.o
+LOAD ./obj/zx_receive_queue.o
+LOAD ./obj/zx_testing.o
+LOAD ./obj/zx_ns_tree.o
+LOAD ./obj/zx_ns.o
+LOAD ./obj/zx_irq_vic.o
+LOAD ./obj/zx_clock_server.o
+LOAD ./obj/zx_clockserver_heap.o
+LOAD ./obj/zx_timer.o
+LOAD ./obj/zx_queue.o
+LOAD ./obj/zx_uart2_transmit_server.o
+LOAD ./obj/zx_uart1_transmit_server.o
+LOAD ./obj/zx_uart_io.o
+LOAD ./obj/zx_uart2_receive_server.o
+LOAD ./obj/zx_uart1_receive_server.o
+LOAD ./obj/zx_irq_device.o
+LOAD ./obj/zx_project_graphics.o
+LOAD ./obj/zx_project_utilities.o
+LOAD ./obj/zx_project_track_sensing.o
+LOAD ./obj/zx_project_track_data.o
+LOAD ./obj/zx_project_shortest_path.o
+LOAD ./obj/zx_project_calibration.o
+LOAD ./obj/zx_project_train_functions.o
+LOAD ./obj/zx_project_ui.o
+LOAD ./obj/zx_project_track_functions.o
+LOAD ./obj/zx_project_sensor.o
+LOAD ./obj/zx_project_path_reservation.o
+LOAD ./obj/zx_project_test_functions.o
+LOAD /u0/wbcowan/cs452/io/lib/libbwio.a
+LOAD /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a
+OUTPUT(zx_milestone_2_track_b.elf elf32-littlearm)
+
+.comment        0x0000000000000000      0x276
+ .comment       0x0000000000000000       0x12 ./obj/zx_kernel_head.o
+ .comment       0x0000000000000012       0x12 ./obj/zx_kernel_body.o
+ .comment       0x0000000000000024       0x12 ./obj/zx_system_calls.o
+ .comment       0x0000000000000036       0x12 ./obj/zx_system_call_handlers.o
+ .comment       0x0000000000000048       0x12 ./obj/zx_ready_queue.o
+ .comment       0x000000000000005a       0x12 ./obj/zx_memory.o
+ .comment       0x000000000000006c       0x12 ./obj/zx_helper.o
+ .comment       0x000000000000007e       0x12 ./obj/zx_receive_queue.o
+ .comment       0x0000000000000090       0x12 ./obj/zx_testing.o
+ .comment       0x00000000000000a2       0x12 ./obj/zx_ns_tree.o
+ .comment       0x00000000000000b4       0x12 ./obj/zx_ns.o
+ .comment       0x00000000000000c6       0x12 ./obj/zx_irq_vic.o
+ .comment       0x00000000000000d8       0x12 ./obj/zx_clock_server.o
+ .comment       0x00000000000000ea       0x12 ./obj/zx_clockserver_heap.o
+ .comment       0x00000000000000fc       0x12 ./obj/zx_timer.o
+ .comment       0x000000000000010e       0x12 ./obj/zx_queue.o
+ .comment       0x0000000000000120       0x12 ./obj/zx_uart2_transmit_server.o
+ .comment       0x0000000000000132       0x12 ./obj/zx_uart1_transmit_server.o
+ .comment       0x0000000000000144       0x12 ./obj/zx_uart_io.o
+ .comment       0x0000000000000156       0x12 ./obj/zx_uart2_receive_server.o
+ .comment       0x0000000000000168       0x12 ./obj/zx_uart1_receive_server.o
+ .comment       0x000000000000017a       0x12 ./obj/zx_irq_device.o
+ .comment       0x000000000000018c       0x12 ./obj/zx_project_graphics.o
+ .comment       0x000000000000019e       0x12 ./obj/zx_project_utilities.o
+ .comment       0x00000000000001b0       0x12 ./obj/zx_project_track_sensing.o
+ .comment       0x00000000000001c2       0x12 ./obj/zx_project_track_data.o
+ .comment       0x00000000000001d4       0x12 ./obj/zx_project_shortest_path.o
+ .comment       0x00000000000001e6       0x12 ./obj/zx_project_calibration.o
+ .comment       0x00000000000001f8       0x12 ./obj/zx_project_train_functions.o
+ .comment       0x000000000000020a       0x12 ./obj/zx_project_ui.o
+ .comment       0x000000000000021c       0x12 ./obj/zx_project_track_functions.o
+ .comment       0x000000000000022e       0x12 ./obj/zx_project_sensor.o
+ .comment       0x0000000000000240       0x12 ./obj/zx_project_path_reservation.o
+ .comment       0x0000000000000252       0x12 ./obj/zx_project_test_functions.o
+ .comment       0x0000000000000264       0x12 /u0/wbcowan/cs452/io/lib/libbwio.a(bwio.o)
+
+.debug_line     0x0000000000000000      0x256
+ .debug_line    0x0000000000000000       0x86 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_udivsi3.o)
+ .debug_line    0x0000000000000086       0x92 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_divsi3.o)
+ .debug_line    0x0000000000000118       0x6f /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_umodsi3.o)
+ .debug_line    0x0000000000000187       0x75 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_modsi3.o)
+ .debug_line    0x00000000000001fc       0x5a /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_dvmd_tls.o)
+
+.debug_info     0x0000000000000000      0x235
+ .debug_info    0x0000000000000000       0x71 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_udivsi3.o)
+ .debug_info    0x0000000000000071       0x71 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_divsi3.o)
+ .debug_info    0x00000000000000e2       0x71 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_umodsi3.o)
+ .debug_info    0x0000000000000153       0x71 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_modsi3.o)
+ .debug_info    0x00000000000001c4       0x71 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_dvmd_tls.o)
+
+.debug_abbrev   0x0000000000000000       0x64
+ .debug_abbrev  0x0000000000000000       0x14 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_udivsi3.o)
+ .debug_abbrev  0x0000000000000014       0x14 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_divsi3.o)
+ .debug_abbrev  0x0000000000000028       0x14 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_umodsi3.o)
+ .debug_abbrev  0x000000000000003c       0x14 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_modsi3.o)
+ .debug_abbrev  0x0000000000000050       0x14 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_dvmd_tls.o)
+
+.debug_aranges  0x0000000000000000       0xa0
+ .debug_aranges
+                0x0000000000000000       0x20 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_udivsi3.o)
+ .debug_aranges
+                0x0000000000000020       0x20 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_divsi3.o)
+ .debug_aranges
+                0x0000000000000040       0x20 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_umodsi3.o)
+ .debug_aranges
+                0x0000000000000060       0x20 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_modsi3.o)
+ .debug_aranges
+                0x0000000000000080       0x20 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_dvmd_tls.o)

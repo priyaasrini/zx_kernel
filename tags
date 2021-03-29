@@ -1,0 +1,1231 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ACTIVE_TASK_ID	./include/kernel/zx_kernel_config.h	66;"	d
+API_CS_DELAY	./include/kernel/zx_tasks.h	144;"	d
+API_CS_DELAY_UNTIL	./include/kernel/zx_tasks.h	145;"	d
+API_CS_EXIT	./include/kernel/zx_tasks.h	147;"	d
+API_CS_TIME	./include/kernel/zx_tasks.h	146;"	d
+API_CS_UNSUPPORTED	./include/kernel/zx_tasks.h	143;"	d
+API_NS_EXIT	./include/kernel/zx_ns.h	16;"	d
+API_NS_HANDSHAKE	./include/kernel/zx_ns.h	15;"	d
+API_NS_REGISTER	./include/kernel/zx_ns.h	13;"	d
+API_NS_REGISTER_FAIL	./include/kernel/zx_ns.h	19;"	d
+API_NS_REGISTER_SUCCESS	./include/kernel/zx_ns.h	18;"	d
+API_NS_UNSUPPORTED	./include/kernel/zx_ns.h	11;"	d
+API_NS_WHOIS	./include/kernel/zx_ns.h	12;"	d
+API_NS_WHOIS_FAIL	./include/kernel/zx_ns.h	21;"	d
+API_UART1_GETC	./include/kernel/zx_tasks.h	176;"	d
+API_UART1_PUTC	./include/kernel/zx_tasks.h	177;"	d
+API_UART1_PUT_MULTIPLE	./include/kernel/zx_tasks.h	183;"	d
+API_UART2_GETC	./include/kernel/zx_tasks.h	178;"	d
+API_UART2_PUTC	./include/kernel/zx_tasks.h	179;"	d
+API_UART2_PUT_MULTIPLE	./include/kernel/zx_tasks.h	184;"	d
+API_UART_EXIT	./include/kernel/zx_tasks.h	180;"	d
+API_UART_UNSUPPORTED	./include/kernel/zx_tasks.h	175;"	d
+ARRAY_INDEX_MASK	./include/kernel/zx_tasks.h	81;"	d
+AWAIT_TIMER_TID	./include/kernel/zx_kernel_config.h	76;"	d
+AWAIT_UART1_RX_TID	./include/kernel/zx_kernel_config.h	81;"	d
+AWAIT_UART1_TX_TID	./include/kernel/zx_kernel_config.h	79;"	d
+AWAIT_UART2_RX_TID	./include/kernel/zx_kernel_config.h	85;"	d
+AWAIT_UART2_TX_TID	./include/kernel/zx_kernel_config.h	83;"	d
+Alloc	./src/kernel/zx_system_calls.c	/^void* Alloc()$/;"	f
+AwaitEvent	./src/kernel/zx_system_calls.c	/^int AwaitEvent(int event_number)$/;"	f
+BAUD_RATE_DIVISOR	./include/kernel/zx_uart_io.h	21;"	d
+CLOCK_SERVER_TID	./include/kernel/zx_kernel_config.h	88;"	d
+CLOCK_TICKS	./include/project/backup/zx_a0_timer.h	22;"	d
+CLOCK_TICKS	./include/project/zx_project_timer.h	22;"	d
+COM1	./include/kernel/zx_uart_io.h	43;"	d
+COM2	./include/kernel/zx_uart_io.h	44;"	d
+CURRENT_TRACK	./include/project/backup/zx_track_data.h	24;"	d
+CURRENT_TRACK	./include/project/backup/zx_track_data.h	27;"	d
+CURRENT_TRACK	./include/project/zx_project_track_data.h	24;"	d
+CURRENT_TRACK	./include/project/zx_project_track_data.h	27;"	d
+CloseClockServer	./src/kernel/zx_system_calls.c	/^int  CloseClockServer()$/;"	f
+CloseNameServer	./src/kernel/zx_system_calls.c	/^void  CloseNameServer()$/;"	f
+CloseUARTServers	./src/kernel/zx_system_calls.c	/^int  CloseUARTServers()$/;"	f
+Create	./src/kernel/zx_system_calls.c	/^int Create( int priority, void (*code)() )$/;"	f
+CreateClockServer	./src/kernel/zx_system_calls.c	/^int CreateClockServer()$/;"	f
+CreateNameServer	./src/kernel/zx_system_calls.c	/^int CreateNameServer()$/;"	f
+CreateUARTServers	./src/kernel/zx_system_calls.c	/^int CreateUARTServers()$/;"	f
+DEBUG_PRINT_STACK_CUSTOM	./include/kernel/zx_helper.h	43;"	d
+DEBUG_PRINT_STACK_IP	./include/kernel/zx_helper.h	42;"	d
+DEBUG_PRINT_STACK_SP	./include/kernel/zx_helper.h	41;"	d
+DEBUG_SWI_MANYARGS	./include/kernel/zx_system_calls.h	28;"	d
+DEBUG_VAR_10	./include/kernel/zx_kernel_config.h	112;"	d
+DEBUG_VAR_20	./include/kernel/zx_kernel_config.h	113;"	d
+DEBUG_VAR_30	./include/kernel/zx_kernel_config.h	114;"	d
+DEBUG_VAR_40	./include/kernel/zx_kernel_config.h	115;"	d
+DEBUG_VAR_BASE	./include/kernel/zx_kernel_config.h	101;"	d
+DEBUG_VAR_MISSED_INTR_CLOCK	./include/kernel/zx_kernel_config.h	105;"	d
+DEBUG_VAR_MISSED_INTR_UART1_RX	./include/kernel/zx_kernel_config.h	107;"	d
+DEBUG_VAR_MISSED_INTR_UART1_TX	./include/kernel/zx_kernel_config.h	106;"	d
+DEBUG_VAR_MISSED_INTR_UART2_RX	./include/kernel/zx_kernel_config.h	109;"	d
+DEBUG_VAR_MISSED_INTR_UART2_TX	./include/kernel/zx_kernel_config.h	108;"	d
+DECODERS_COUNT	./include/project/backup/zx_a0.h	54;"	d
+DECODERS_COUNT	./include/project/zx_project.h	54;"	d
+DIR_AHEAD	./include/project/backup/zx_track_node.h	22;"	d
+DIR_AHEAD	./include/project/zx_project_track_node.h	22;"	d
+DIR_CURVED	./include/project/backup/zx_track_node.h	24;"	d
+DIR_CURVED	./include/project/zx_project_track_node.h	24;"	d
+DIR_STRAIGHT	./include/project/backup/zx_track_node.h	23;"	d
+DIR_STRAIGHT	./include/project/zx_project_track_node.h	23;"	d
+DISPLAY_COLUMN_END	./include/project/backup/zx_a0_graphics.h	12;"	d
+DISPLAY_COLUMN_END	./include/project/zx_project_graphics.h	12;"	d
+DISPLAY_COLUMN_START	./include/project/backup/zx_a0_graphics.h	11;"	d
+DISPLAY_COLUMN_START	./include/project/zx_project_graphics.h	11;"	d
+DISPLAY_ROW_END	./include/project/backup/zx_a0_graphics.h	10;"	d
+DISPLAY_ROW_END	./include/project/zx_project_graphics.h	10;"	d
+DISPLAY_ROW_START	./include/project/backup/zx_a0_graphics.h	9;"	d
+DISPLAY_ROW_START	./include/project/zx_project_graphics.h	9;"	d
+DISTANCE_UNIT	./include/project/backup/zx_track_sensing.h	26;"	d
+DISTANCE_UNIT	./include/project/zx_project_track_sensing.h	26;"	d
+DebugManyArgs	./src/kernel/zx_system_calls.c	/^int DebugManyArgs(int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7)$/;"	f
+Delay	./src/kernel/zx_system_calls.c	/^int Delay(int ticks)$/;"	f
+DelayUntil	./src/kernel/zx_system_calls.c	/^int DelayUntil(int ticks)$/;"	f
+ERRMSG_IMPOSSIBLE_TASKID	./include/kernel/zx_err_strings.h	14;"	d
+ERRMSG_NONEXISTENT_TASK	./include/kernel/zx_err_strings.h	17;"	d
+ERRMSG_SEND_RECEIVE_REPLY_TRANSACTION_INCOMPLETE	./include/kernel/zx_err_strings.h	20;"	d
+ERR_CANNOT_CREATE_TASK	./include/kernel/zx_err.h	27;"	d
+ERR_CLOSURE_NONE	./include/kernel/zx_err.h	22;"	d
+ERR_CLOSURE_TASK_IS_RECEIVE_BLOCKED	./include/kernel/zx_err.h	24;"	d
+ERR_CLOSURE_TASK_IS_REPLY_BLOCKED	./include/kernel/zx_err.h	25;"	d
+ERR_CLOSURE_TASK_IS_SEND_BLOCKED	./include/kernel/zx_err.h	23;"	d
+ERR_IMPOSSIBLE_TASKID	./include/kernel/zx_err.h	15;"	d
+ERR_INSUFFICIENT_REPLY_BUFFER	./include/kernel/zx_err.h	19;"	d
+ERR_NONEXISTENT_TASK	./include/kernel/zx_err.h	16;"	d
+ERR_SENDER_NOT_REPLY_BLOCKED	./include/kernel/zx_err.h	18;"	d
+ERR_SEND_RECEIVE_REPLY_TRANSACTION_INCOMPLETE	./include/kernel/zx_err.h	17;"	d
+ERR_SUCCESS	./include/kernel/zx_err.h	14;"	d
+EVENT_TIMER	./include/kernel/zx_system_calls.h	34;"	d
+EVENT_UART1_RX	./include/kernel/zx_system_calls.h	36;"	d
+EVENT_UART1_TRANSMIT_ANYINTR	./include/kernel/zx_system_calls.h	41;"	d
+EVENT_UART1_TRANSMIT_MODEM	./include/kernel/zx_system_calls.h	42;"	d
+EVENT_UART1_TX	./include/kernel/zx_system_calls.h	37;"	d
+EVENT_UART2_RX	./include/kernel/zx_system_calls.h	38;"	d
+EVENT_UART2_TX	./include/kernel/zx_system_calls.h	39;"	d
+Exit	./src/kernel/zx_system_calls.c	/^void Exit()$/;"	f
+FALSE	./include/kernel/zx_helper.h	46;"	d
+FIRST_USER_TASK	./include/kernel/zx_testing.h	13;"	d
+FIRST_USER_TASK_PRIORITY	./include/kernel/zx_tasks.h	86;"	d
+FOREVER	./include/kernel/zx_helper.h	15;"	d
+FOREVER	./include/project/backup/zx_a0_utilities.h	12;"	d
+FOREVER	./include/project/backup/zx_track_sensing.h	12;"	d
+FOREVER	./include/project/zx_project_track_sensing.h	12;"	d
+FOREVER	./include/project/zx_project_utilities.h	12;"	d
+FOREVER	./src/kernel/zx_clock_server.c	27;"	d	file:
+FOREVER	./src/kernel/zx_kernel_head.c	25;"	d	file:
+FOREVER	./src/kernel/zx_testing.c	490;"	d	file:
+FOREVER	./src/kernel/zx_uart_server.c	22;"	d	file:
+FRACTION_OF_SECOND	./include/project/backup/zx_a0_timer.h	21;"	d
+FRACTION_OF_SECOND	./include/project/zx_project_timer.h	21;"	d
+FUARTCLK	./include/kernel/zx_uart_io.h	20;"	d
+Free	./src/kernel/zx_system_calls.c	/^void Free()$/;"	f
+Free_bst	./src/kernel/zx_ns_tree.c	/^void Free_bst( zx_bst_node **root )$/;"	f
+GENERATION_NUMBER_MASK	./include/kernel/zx_tasks.h	80;"	d
+GLOBAL_VARIABLES_BASE	./include/kernel/zx_kernel_config.h	51;"	d
+GLOBAL_VARIABLES_SPACE_SIZE	./include/kernel/zx_kernel_config.h	41;"	d
+GO2_CMD	./include/project/backup/zx_a0.h	20;"	d
+GO2_CMD	./include/project/zx_project.h	20;"	d
+GetC	./src/kernel/zx_system_calls.c	/^int GetC(int channel)$/;"	f
+HEAP_SIZE	./include/kernel/zx_kernel_config.h	118;"	d
+HWI	./include/kernel/zx_system_calls.h	30;"	d
+IDLE_TASK	./include/kernel/zx_tasks.h	118;"	d
+IDLE_TASK_PRIORITY	./include/kernel/zx_tasks.h	117;"	d
+IDLE_TASK_TID	./include/kernel/zx_tasks.h	115;"	d
+IDLE_TASK_TIMER	./include/kernel/zx_tasks.h	119;"	d
+IDLE_TASK_TIMER_INIT_VAL	./include/kernel/zx_tasks.h	125;"	d
+INITIAL_SWITCH_POSITION	./include/project/backup/zx_a0.h	48;"	d
+INITIAL_SWITCH_POSITION	./include/project/zx_project.h	48;"	d
+INITIAL_SWITCH_POSITION_ALPHABET	./include/project/backup/zx_a0.h	49;"	d
+INITIAL_SWITCH_POSITION_ALPHABET	./include/project/zx_project.h	49;"	d
+INTR_SOURCE_TIMER_1	./include/kernel/zx_irq_vic.h	24;"	d
+INTR_SOURCE_UART1_MODEM	./include/kernel/zx_irq_device.h	56;"	d
+INTR_SOURCE_UART1_RX	./include/kernel/zx_irq_device.h	53;"	d
+INTR_SOURCE_UART1_TX	./include/kernel/zx_irq_device.h	54;"	d
+INTR_SOURCE_UART2_RX	./include/kernel/zx_irq_device.h	58;"	d
+INTR_SOURCE_UART2_TX	./include/kernel/zx_irq_device.h	59;"	d
+INTR_SOURCE_UART_1	./include/kernel/zx_irq_vic.h	28;"	d
+INTR_SOURCE_UART_2	./include/kernel/zx_irq_vic.h	31;"	d
+INVALID_TASK_ID	./include/kernel/zx_tasks.h	75;"	d
+IRQ_CPSR_DISABLE_MASK	./include/kernel/zx_irq_vic.h	49;"	d
+IRQ_INTR_CLEAR_OFFSET	./include/kernel/zx_irq_vic.h	44;"	d
+IRQ_INTR_ENABLE_OFFSET	./include/kernel/zx_irq_vic.h	43;"	d
+IRQ_PROTECTION_OFFSET	./include/kernel/zx_irq_vic.h	46;"	d
+IRQ_RAW_OFFSET	./include/kernel/zx_irq_vic.h	42;"	d
+IRQ_STATUS_OFFSET	./include/kernel/zx_irq_vic.h	41;"	d
+IRQ_TIMER	./include/kernel/zx_irq_vic.h	17;"	d
+IRQ_VECTOR	./include/kernel/zx_kernel_config.h	29;"	d
+KB	./include/kernel/zx_kernel_config.h	26;"	d
+KERNEL_CODE_SIZE	./include/kernel/zx_kernel_config.h	40;"	d
+Kill	./src/kernel/zx_system_calls.c	/^void Kill( int tid)$/;"	f
+MAX_RANDOM	./include/kernel/zx_helper.h	38;"	d
+MEMORY_BASE	./include/kernel/zx_kernel_config.h	36;"	d
+MEMORY_END	./include/kernel/zx_kernel_config.h	37;"	d
+MIE_MASK	./include/kernel/zx_irq_device.h	32;"	d
+MIS_MASK	./include/kernel/zx_irq_device.h	47;"	d
+MSG_SERVER_EXITED	./include/kernel/zx_err.h	30;"	d
+MyParentTid	./src/kernel/zx_system_calls.c	/^int MyParentTid()$/;"	f
+MyTid	./src/kernel/zx_system_calls.c	/^int MyTid()$/;"	f
+NAME_SERVER_TID	./include/kernel/zx_kernel_config.h	70;"	d
+NEXT_NODE_COUNT	./include/project/backup/zx_track_sensing.h	53;"	d
+NEXT_NODE_COUNT	./include/project/zx_project_track_sensing.h	53;"	d
+NEXT_SENSOR_COUNT	./include/project/backup/zx_track_sensing.h	52;"	d
+NEXT_SENSOR_COUNT	./include/project/zx_project_track_sensing.h	52;"	d
+NEXT_SENSOR_LOOKUP_BREADTH	./include/project/backup/zx_track_sensing.h	59;"	d
+NEXT_SENSOR_LOOKUP_BREADTH	./include/project/zx_project_track_sensing.h	59;"	d
+NEXT_SENSOR_LOOKUP_DEPTH	./include/project/backup/zx_track_sensing.h	56;"	d
+NEXT_SENSOR_LOOKUP_DEPTH	./include/project/zx_project_track_sensing.h	56;"	d
+NO	./include/project/backup/zx_shortest_path.h	12;"	d
+NO	./include/project/zx_project_shortest_path.h	12;"	d
+NODE_BRANCH	./include/project/backup/zx_track_node.h	/^     NODE_BRANCH,$/;"	e	enum:__anon23
+NODE_BRANCH	./include/project/zx_project_track_node.h	/^     NODE_BRANCH,$/;"	e	enum:__anon9
+NODE_ENTER	./include/project/backup/zx_track_node.h	/^     NODE_ENTER,$/;"	e	enum:__anon23
+NODE_ENTER	./include/project/zx_project_track_node.h	/^     NODE_ENTER,$/;"	e	enum:__anon9
+NODE_EXIT	./include/project/backup/zx_track_node.h	/^     NODE_EXIT,$/;"	e	enum:__anon23
+NODE_EXIT	./include/project/zx_project_track_node.h	/^     NODE_EXIT,$/;"	e	enum:__anon9
+NODE_MERGE	./include/project/backup/zx_track_node.h	/^     NODE_MERGE,$/;"	e	enum:__anon23
+NODE_MERGE	./include/project/zx_project_track_node.h	/^     NODE_MERGE,$/;"	e	enum:__anon9
+NODE_NONE	./include/project/backup/zx_track_node.h	/^     NODE_NONE,$/;"	e	enum:__anon23
+NODE_NONE	./include/project/zx_project_track_node.h	/^     NODE_NONE,$/;"	e	enum:__anon9
+NODE_SENSOR	./include/project/backup/zx_track_node.h	/^     NODE_SENSOR,$/;"	e	enum:__anon23
+NODE_SENSOR	./include/project/zx_project_track_node.h	/^     NODE_SENSOR,$/;"	e	enum:__anon9
+NULL	./include/kernel/zx_kernel_head.h	13;"	d
+NULL	./include/kernel/zx_ready_queue.h	13;"	d
+NULL	./src/kernel/zx_ns_tree.c	15;"	d	file:
+NUM_LAPS_PER_SPEED	./src/project/backup before refactoring/zx_milestone_1.c	26;"	d	file:
+OFF	./include/kernel/zx_uart_io.h	47;"	d
+OFFSET_OPT	./include/project/backup/zx_a0.h	24;"	d
+OFFSET_OPT	./include/project/zx_project.h	24;"	d
+ON	./include/kernel/zx_timer.h	14;"	d
+ON	./include/kernel/zx_uart_io.h	46;"	d
+ONE_MILLISECOND_TICK	./include/kernel/zx_kernel_config.h	123;"	d
+ONE_TICK	./include/kernel/zx_kernel_config.h	121;"	d
+PRIORITY_BIT_DATA	./include/kernel/zx_kernel_config.h	67;"	d
+PRIORITY_COUNT	./include/kernel/zx_kernel_config.h	31;"	d
+Pass	./src/kernel/zx_system_calls.c	/^void Pass()$/;"	f
+PutC	./src/kernel/zx_system_calls.c	/^int PutC(int channel, char c)$/;"	f
+PutMultiple	./src/kernel/zx_system_calls.c	/^int PutMultiple(int channel, char* array)$/;"	f
+QUIT_CMD	./include/project/backup/zx_a0.h	21;"	d
+QUIT_CMD	./include/project/zx_project.h	21;"	d
+R0_INIT_VAL	./include/kernel/zx_tasks.h	55;"	d
+R10_INIT_VAL	./include/kernel/zx_tasks.h	66;"	d
+R11_INIT_VAL	./include/kernel/zx_tasks.h	67;"	d
+R12_INIT_VAL	./include/kernel/zx_tasks.h	68;"	d
+R14_INIT_VAL	./include/kernel/zx_tasks.h	70;"	d
+R1_INIT_VAL	./include/kernel/zx_tasks.h	56;"	d
+R2_INIT_VAL	./include/kernel/zx_tasks.h	57;"	d
+R3_INIT_VAL	./include/kernel/zx_tasks.h	58;"	d
+R4_INIT_VAL	./include/kernel/zx_tasks.h	59;"	d
+R5_INIT_VAL	./include/kernel/zx_tasks.h	60;"	d
+R6_INIT_VAL	./include/kernel/zx_tasks.h	61;"	d
+R7_INIT_VAL	./include/kernel/zx_tasks.h	62;"	d
+R8_INIT_VAL	./include/kernel/zx_tasks.h	63;"	d
+R9_INIT_VAL	./include/kernel/zx_tasks.h	64;"	d
+READY_QUEUE_BASE	./include/kernel/zx_kernel_config.h	54;"	d
+READY_QUEUE_HEADER_BASE	./include/kernel/zx_kernel_config.h	53;"	d
+READY_QUEUE_HEADER_SPACE_SIZE	./include/kernel/zx_kernel_config.h	45;"	d
+READY_QUEUE_SPACE_SIZE	./include/kernel/zx_kernel_config.h	46;"	d
+RECEIVE_BUF_LEN	./include/project/backup/zx_a0.h	27;"	d
+RECEIVE_BUF_LEN	./include/project/zx_project.h	27;"	d
+RECEIVE_ERROR	./include/kernel/zx_err.h	33;"	d
+RECEIVE_QUEUE_BASE	./include/kernel/zx_kernel_config.h	58;"	d
+RECEIVE_QUEUE_HEADER_SPACE_SIZE	./include/kernel/zx_kernel_config.h	47;"	d
+RECEIVE_QUEUE_HEAD_HEADER_BASE	./include/kernel/zx_kernel_config.h	56;"	d
+RECEIVE_QUEUE_SPACE_SIZE	./include/kernel/zx_kernel_config.h	48;"	d
+RECEIVE_QUEUE_TAIL_HEADER_BASE	./include/kernel/zx_kernel_config.h	57;"	d
+REQUEST_STRUCTURE	./include/kernel/zx_kernel_config.h	68;"	d
+REVERSE_SPEED	./include/project/backup/zx_a0.h	36;"	d
+REVERSE_SPEED	./include/project/zx_project.h	36;"	d
+REVERSE_TRAIN	./include/project/backup/zx_a0.h	38;"	d
+REVERSE_TRAIN	./include/project/zx_project.h	38;"	d
+RIE_MASK	./include/kernel/zx_irq_device.h	30;"	d
+RIS_MASK	./include/kernel/zx_irq_device.h	45;"	d
+ROUTE_REQUEST_EXIT	./include/project/backup/zx_track_sensing.h	172;"	d
+ROUTE_REQUEST_EXIT	./include/project/zx_project_track_sensing.h	172;"	d
+ROUTE_REQUEST_REVERSES	./include/project/backup/zx_track_sensing.h	171;"	d
+ROUTE_REQUEST_REVERSES	./include/project/zx_project_track_sensing.h	171;"	d
+ROUTE_REQUEST_SHORTEST	./include/project/backup/zx_track_sensing.h	170;"	d
+ROUTE_REQUEST_SHORTEST	./include/project/zx_project_track_sensing.h	170;"	d
+RV_CMD	./include/project/backup/zx_a0.h	16;"	d
+RV_CMD	./include/project/zx_project.h	16;"	d
+Receive	./src/kernel/zx_system_calls.c	/^int  Receive( int *tid, void *message, int msglen )$/;"	f
+ReceiveMessage	./src/kernel/zx_testing.c	/^   int ReceiveMessage(int from_id)$/;"	f
+RegisterAs	./src/kernel/zx_system_calls.c	/^int  RegisterAs( char* name )$/;"	f
+Reply	./src/kernel/zx_system_calls.c	/^int  Reply( int tid, void *reply, int replylen )$/;"	f
+ReplyMessageTo	./src/kernel/zx_testing.c	/^   void ReplyMessageTo(int tid, int from_id, char* ptext)$/;"	f
+SENSORS_PER_DECODER	./include/project/backup/zx_a0.h	55;"	d
+SENSORS_PER_DECODER	./include/project/zx_project.h	55;"	d
+SENSOR_A1	./include/project/backup/zx_track_data.h	43;"	d
+SENSOR_A1	./include/project/zx_project_track_data.h	43;"	d
+SENSOR_A10	./include/project/backup/zx_track_data.h	52;"	d
+SENSOR_A10	./include/project/zx_project_track_data.h	52;"	d
+SENSOR_A11	./include/project/backup/zx_track_data.h	53;"	d
+SENSOR_A11	./include/project/zx_project_track_data.h	53;"	d
+SENSOR_A12	./include/project/backup/zx_track_data.h	54;"	d
+SENSOR_A12	./include/project/zx_project_track_data.h	54;"	d
+SENSOR_A13	./include/project/backup/zx_track_data.h	55;"	d
+SENSOR_A13	./include/project/zx_project_track_data.h	55;"	d
+SENSOR_A14	./include/project/backup/zx_track_data.h	56;"	d
+SENSOR_A14	./include/project/zx_project_track_data.h	56;"	d
+SENSOR_A15	./include/project/backup/zx_track_data.h	57;"	d
+SENSOR_A15	./include/project/zx_project_track_data.h	57;"	d
+SENSOR_A16	./include/project/backup/zx_track_data.h	58;"	d
+SENSOR_A16	./include/project/zx_project_track_data.h	58;"	d
+SENSOR_A2	./include/project/backup/zx_track_data.h	44;"	d
+SENSOR_A2	./include/project/zx_project_track_data.h	44;"	d
+SENSOR_A3	./include/project/backup/zx_track_data.h	45;"	d
+SENSOR_A3	./include/project/zx_project_track_data.h	45;"	d
+SENSOR_A4	./include/project/backup/zx_track_data.h	46;"	d
+SENSOR_A4	./include/project/zx_project_track_data.h	46;"	d
+SENSOR_A5	./include/project/backup/zx_track_data.h	47;"	d
+SENSOR_A5	./include/project/zx_project_track_data.h	47;"	d
+SENSOR_A6	./include/project/backup/zx_track_data.h	48;"	d
+SENSOR_A6	./include/project/zx_project_track_data.h	48;"	d
+SENSOR_A7	./include/project/backup/zx_track_data.h	49;"	d
+SENSOR_A7	./include/project/zx_project_track_data.h	49;"	d
+SENSOR_A8	./include/project/backup/zx_track_data.h	50;"	d
+SENSOR_A8	./include/project/zx_project_track_data.h	50;"	d
+SENSOR_A9	./include/project/backup/zx_track_data.h	51;"	d
+SENSOR_A9	./include/project/zx_project_track_data.h	51;"	d
+SENSOR_B1	./include/project/backup/zx_track_data.h	59;"	d
+SENSOR_B1	./include/project/zx_project_track_data.h	59;"	d
+SENSOR_B10	./include/project/backup/zx_track_data.h	68;"	d
+SENSOR_B10	./include/project/zx_project_track_data.h	68;"	d
+SENSOR_B11	./include/project/backup/zx_track_data.h	69;"	d
+SENSOR_B11	./include/project/zx_project_track_data.h	69;"	d
+SENSOR_B12	./include/project/backup/zx_track_data.h	70;"	d
+SENSOR_B12	./include/project/zx_project_track_data.h	70;"	d
+SENSOR_B13	./include/project/backup/zx_track_data.h	71;"	d
+SENSOR_B13	./include/project/zx_project_track_data.h	71;"	d
+SENSOR_B14	./include/project/backup/zx_track_data.h	72;"	d
+SENSOR_B14	./include/project/zx_project_track_data.h	72;"	d
+SENSOR_B15	./include/project/backup/zx_track_data.h	73;"	d
+SENSOR_B15	./include/project/zx_project_track_data.h	73;"	d
+SENSOR_B16	./include/project/backup/zx_track_data.h	74;"	d
+SENSOR_B16	./include/project/zx_project_track_data.h	74;"	d
+SENSOR_B2	./include/project/backup/zx_track_data.h	60;"	d
+SENSOR_B2	./include/project/zx_project_track_data.h	60;"	d
+SENSOR_B3	./include/project/backup/zx_track_data.h	61;"	d
+SENSOR_B3	./include/project/zx_project_track_data.h	61;"	d
+SENSOR_B4	./include/project/backup/zx_track_data.h	62;"	d
+SENSOR_B4	./include/project/zx_project_track_data.h	62;"	d
+SENSOR_B5	./include/project/backup/zx_track_data.h	63;"	d
+SENSOR_B5	./include/project/zx_project_track_data.h	63;"	d
+SENSOR_B6	./include/project/backup/zx_track_data.h	64;"	d
+SENSOR_B6	./include/project/zx_project_track_data.h	64;"	d
+SENSOR_B7	./include/project/backup/zx_track_data.h	65;"	d
+SENSOR_B7	./include/project/zx_project_track_data.h	65;"	d
+SENSOR_B8	./include/project/backup/zx_track_data.h	66;"	d
+SENSOR_B8	./include/project/zx_project_track_data.h	66;"	d
+SENSOR_B9	./include/project/backup/zx_track_data.h	67;"	d
+SENSOR_B9	./include/project/zx_project_track_data.h	67;"	d
+SENSOR_BUFFER_LEN	./include/project/backup/zx_a0.h	52;"	d
+SENSOR_BUFFER_LEN	./include/project/zx_project.h	52;"	d
+SENSOR_BUF_SIZE	./include/project/backup/zx_track_sensing.h	195;"	d
+SENSOR_BUF_SIZE	./include/project/zx_project_track_sensing.h	195;"	d
+SENSOR_C1	./include/project/backup/zx_track_data.h	75;"	d
+SENSOR_C1	./include/project/zx_project_track_data.h	75;"	d
+SENSOR_C10	./include/project/backup/zx_track_data.h	84;"	d
+SENSOR_C10	./include/project/zx_project_track_data.h	84;"	d
+SENSOR_C11	./include/project/backup/zx_track_data.h	85;"	d
+SENSOR_C11	./include/project/zx_project_track_data.h	85;"	d
+SENSOR_C12	./include/project/backup/zx_track_data.h	86;"	d
+SENSOR_C12	./include/project/zx_project_track_data.h	86;"	d
+SENSOR_C13	./include/project/backup/zx_track_data.h	87;"	d
+SENSOR_C13	./include/project/zx_project_track_data.h	87;"	d
+SENSOR_C14	./include/project/backup/zx_track_data.h	88;"	d
+SENSOR_C14	./include/project/zx_project_track_data.h	88;"	d
+SENSOR_C15	./include/project/backup/zx_track_data.h	89;"	d
+SENSOR_C15	./include/project/zx_project_track_data.h	89;"	d
+SENSOR_C16	./include/project/backup/zx_track_data.h	90;"	d
+SENSOR_C16	./include/project/zx_project_track_data.h	90;"	d
+SENSOR_C2	./include/project/backup/zx_track_data.h	76;"	d
+SENSOR_C2	./include/project/zx_project_track_data.h	76;"	d
+SENSOR_C3	./include/project/backup/zx_track_data.h	77;"	d
+SENSOR_C3	./include/project/zx_project_track_data.h	77;"	d
+SENSOR_C4	./include/project/backup/zx_track_data.h	78;"	d
+SENSOR_C4	./include/project/zx_project_track_data.h	78;"	d
+SENSOR_C5	./include/project/backup/zx_track_data.h	79;"	d
+SENSOR_C5	./include/project/zx_project_track_data.h	79;"	d
+SENSOR_C6	./include/project/backup/zx_track_data.h	80;"	d
+SENSOR_C6	./include/project/zx_project_track_data.h	80;"	d
+SENSOR_C7	./include/project/backup/zx_track_data.h	81;"	d
+SENSOR_C7	./include/project/zx_project_track_data.h	81;"	d
+SENSOR_C8	./include/project/backup/zx_track_data.h	82;"	d
+SENSOR_C8	./include/project/zx_project_track_data.h	82;"	d
+SENSOR_C9	./include/project/backup/zx_track_data.h	83;"	d
+SENSOR_C9	./include/project/zx_project_track_data.h	83;"	d
+SENSOR_D1	./include/project/backup/zx_track_data.h	91;"	d
+SENSOR_D1	./include/project/zx_project_track_data.h	91;"	d
+SENSOR_D10	./include/project/backup/zx_track_data.h	100;"	d
+SENSOR_D10	./include/project/zx_project_track_data.h	100;"	d
+SENSOR_D11	./include/project/backup/zx_track_data.h	101;"	d
+SENSOR_D11	./include/project/zx_project_track_data.h	101;"	d
+SENSOR_D12	./include/project/backup/zx_track_data.h	102;"	d
+SENSOR_D12	./include/project/zx_project_track_data.h	102;"	d
+SENSOR_D13	./include/project/backup/zx_track_data.h	103;"	d
+SENSOR_D13	./include/project/zx_project_track_data.h	103;"	d
+SENSOR_D14	./include/project/backup/zx_track_data.h	104;"	d
+SENSOR_D14	./include/project/zx_project_track_data.h	104;"	d
+SENSOR_D15	./include/project/backup/zx_track_data.h	105;"	d
+SENSOR_D15	./include/project/zx_project_track_data.h	105;"	d
+SENSOR_D16	./include/project/backup/zx_track_data.h	106;"	d
+SENSOR_D16	./include/project/zx_project_track_data.h	106;"	d
+SENSOR_D2	./include/project/backup/zx_track_data.h	92;"	d
+SENSOR_D2	./include/project/zx_project_track_data.h	92;"	d
+SENSOR_D3	./include/project/backup/zx_track_data.h	93;"	d
+SENSOR_D3	./include/project/zx_project_track_data.h	93;"	d
+SENSOR_D4	./include/project/backup/zx_track_data.h	94;"	d
+SENSOR_D4	./include/project/zx_project_track_data.h	94;"	d
+SENSOR_D5	./include/project/backup/zx_track_data.h	95;"	d
+SENSOR_D5	./include/project/zx_project_track_data.h	95;"	d
+SENSOR_D6	./include/project/backup/zx_track_data.h	96;"	d
+SENSOR_D6	./include/project/zx_project_track_data.h	96;"	d
+SENSOR_D7	./include/project/backup/zx_track_data.h	97;"	d
+SENSOR_D7	./include/project/zx_project_track_data.h	97;"	d
+SENSOR_D8	./include/project/backup/zx_track_data.h	98;"	d
+SENSOR_D8	./include/project/zx_project_track_data.h	98;"	d
+SENSOR_D9	./include/project/backup/zx_track_data.h	99;"	d
+SENSOR_D9	./include/project/zx_project_track_data.h	99;"	d
+SENSOR_DATA	./include/project/backup/zx_a0.h	34;"	d
+SENSOR_DATA	./include/project/zx_project.h	34;"	d
+SENSOR_DUMP	./include/project/backup/zx_a0.h	33;"	d
+SENSOR_DUMP	./include/project/zx_project.h	33;"	d
+SENSOR_E1	./include/project/backup/zx_track_data.h	107;"	d
+SENSOR_E1	./include/project/zx_project_track_data.h	107;"	d
+SENSOR_E10	./include/project/backup/zx_track_data.h	116;"	d
+SENSOR_E10	./include/project/zx_project_track_data.h	116;"	d
+SENSOR_E11	./include/project/backup/zx_track_data.h	117;"	d
+SENSOR_E11	./include/project/zx_project_track_data.h	117;"	d
+SENSOR_E12	./include/project/backup/zx_track_data.h	118;"	d
+SENSOR_E12	./include/project/zx_project_track_data.h	118;"	d
+SENSOR_E13	./include/project/backup/zx_track_data.h	119;"	d
+SENSOR_E13	./include/project/zx_project_track_data.h	119;"	d
+SENSOR_E14	./include/project/backup/zx_track_data.h	120;"	d
+SENSOR_E14	./include/project/zx_project_track_data.h	120;"	d
+SENSOR_E15	./include/project/backup/zx_track_data.h	121;"	d
+SENSOR_E15	./include/project/zx_project_track_data.h	121;"	d
+SENSOR_E16	./include/project/backup/zx_track_data.h	122;"	d
+SENSOR_E16	./include/project/zx_project_track_data.h	122;"	d
+SENSOR_E2	./include/project/backup/zx_track_data.h	108;"	d
+SENSOR_E2	./include/project/zx_project_track_data.h	108;"	d
+SENSOR_E3	./include/project/backup/zx_track_data.h	109;"	d
+SENSOR_E3	./include/project/zx_project_track_data.h	109;"	d
+SENSOR_E4	./include/project/backup/zx_track_data.h	110;"	d
+SENSOR_E4	./include/project/zx_project_track_data.h	110;"	d
+SENSOR_E5	./include/project/backup/zx_track_data.h	111;"	d
+SENSOR_E5	./include/project/zx_project_track_data.h	111;"	d
+SENSOR_E6	./include/project/backup/zx_track_data.h	112;"	d
+SENSOR_E6	./include/project/zx_project_track_data.h	112;"	d
+SENSOR_E7	./include/project/backup/zx_track_data.h	113;"	d
+SENSOR_E7	./include/project/zx_project_track_data.h	113;"	d
+SENSOR_E8	./include/project/backup/zx_track_data.h	114;"	d
+SENSOR_E8	./include/project/zx_project_track_data.h	114;"	d
+SENSOR_E9	./include/project/backup/zx_track_data.h	115;"	d
+SENSOR_E9	./include/project/zx_project_track_data.h	115;"	d
+SENSOR_TABLE_DATA_X	./include/project/backup/zx_a0.h	57;"	d
+SENSOR_TABLE_DATA_X	./include/project/zx_project.h	57;"	d
+SENSOR_TABLE_DATA_Y	./include/project/backup/zx_a0.h	58;"	d
+SENSOR_TABLE_DATA_Y	./include/project/zx_project.h	58;"	d
+SOLENOID_OFF	./include/project/backup/zx_a0.h	32;"	d
+SOLENOID_OFF	./include/project/zx_project.h	32;"	d
+START_TID	./include/kernel/zx_kernel_config.h	34;"	d
+STAT_VAR1	./include/kernel/zx_kernel_config.h	72;"	d
+STAT_VAR2	./include/kernel/zx_kernel_config.h	74;"	d
+STOP_TRAIN	./include/project/backup/zx_a0.h	37;"	d
+STOP_TRAIN	./include/project/zx_project.h	37;"	d
+ST_CMD	./include/project/backup/zx_a0.h	19;"	d
+ST_CMD	./include/project/zx_project.h	19;"	d
+SWITCH_COUNT	./include/project/backup/zx_a0.h	43;"	d
+SWITCH_COUNT	./include/project/zx_project.h	43;"	d
+SWITCH_TABLES_SPACE	./include/project/backup/zx_a0.h	46;"	d
+SWITCH_TABLES_SPACE	./include/project/zx_project.h	46;"	d
+SWITCH_TABLE_POS_X	./include/project/backup/zx_a0.h	44;"	d
+SWITCH_TABLE_POS_X	./include/project/zx_project.h	44;"	d
+SWITCH_TABLE_POS_Y	./include/project/backup/zx_a0.h	45;"	d
+SWITCH_TABLE_POS_Y	./include/project/zx_project.h	45;"	d
+SWI_ALLOC	./include/kernel/zx_system_calls.h	22;"	d
+SWI_AWAIT_EVENT	./include/kernel/zx_system_calls.h	24;"	d
+SWI_CREATE_TASK	./include/kernel/zx_system_calls.h	14;"	d
+SWI_ERROR	./include/kernel/zx_system_calls.h	32;"	d
+SWI_EXIT	./include/kernel/zx_system_calls.h	16;"	d
+SWI_FREE	./include/kernel/zx_system_calls.h	23;"	d
+SWI_KILL	./include/kernel/zx_system_calls.h	26;"	d
+SWI_MYPTID	./include/kernel/zx_system_calls.h	18;"	d
+SWI_MYTID	./include/kernel/zx_system_calls.h	17;"	d
+SWI_NONE	./include/kernel/zx_system_calls.h	13;"	d
+SWI_PASS	./include/kernel/zx_system_calls.h	15;"	d
+SWI_RECEIVE	./include/kernel/zx_system_calls.h	20;"	d
+SWI_REPLY	./include/kernel/zx_system_calls.h	21;"	d
+SWI_SEND	./include/kernel/zx_system_calls.h	19;"	d
+SWI_SHUTDOWN	./include/kernel/zx_system_calls.h	25;"	d
+SWI_VECTOR	./include/kernel/zx_kernel_config.h	28;"	d
+SW_CMD	./include/project/backup/zx_a0.h	17;"	d
+SW_CMD	./include/project/zx_project.h	17;"	d
+SW_CURVED	./include/project/backup/zx_a0.h	31;"	d
+SW_CURVED	./include/project/zx_project.h	31;"	d
+SW_STRAIGHT	./include/project/backup/zx_a0.h	30;"	d
+SW_STRAIGHT	./include/project/zx_project.h	30;"	d
+Send	./src/kernel/zx_system_calls.c	/^int  Send( int tid, void *message, int msglen, void *reply, int replylen )$/;"	f
+SendMessageTo	./src/kernel/zx_testing.c	/^   void SendMessageTo(int receiver_tid, int from_id, char* ptext)$/;"	f
+Shutdown	./src/kernel/zx_system_calls.c	/^void Shutdown()$/;"	f
+TASK_ARRAY_INDEX_PART_MASK	./include/kernel/zx_tasks.h	78;"	d
+TASK_ARRAY_INDEX_PART_SIZE	./include/kernel/zx_tasks.h	77;"	d
+TASK_COUNT	./include/kernel/zx_kernel_config.h	32;"	d
+TASK_DESCRIPTOR_BASE	./include/kernel/zx_kernel_config.h	60;"	d
+TASK_DESCRIPTOR_SPACE_SIZE	./include/kernel/zx_kernel_config.h	49;"	d
+TASK_NONINTERRUPTABLE_CPSR	./include/kernel/zx_tasks.h	53;"	d
+TASK_NORMAL_CPSR	./include/kernel/zx_tasks.h	52;"	d
+TASK_NO_RETURN_VALUE	./include/kernel/zx_tasks.h	73;"	d
+TASK_STACK_SPACE_SIZE	./include/kernel/zx_kernel_config.h	43;"	d
+TASK_STATE_ACTIVE	./include/kernel/zx_tasks.h	44;"	d
+TASK_STATE_EVENT_BLOCKED	./include/kernel/zx_tasks.h	50;"	d
+TASK_STATE_READY	./include/kernel/zx_tasks.h	43;"	d
+TASK_STATE_RECEIVE_BLOCKED	./include/kernel/zx_tasks.h	47;"	d
+TASK_STATE_REPLY_BLOCKED	./include/kernel/zx_tasks.h	49;"	d
+TASK_STATE_SEND_BLOCKED	./include/kernel/zx_tasks.h	48;"	d
+TASK_STATE_ZOMBIE	./include/kernel/zx_tasks.h	45;"	d
+TD_BIT_DATA	./include/kernel/zx_kernel_config.h	64;"	d
+TERMINAL_LENGTH	./include/project/backup/zx_a0_graphics.h	14;"	d
+TERMINAL_LENGTH	./include/project/zx_project_graphics.h	14;"	d
+TERMINAL_POS_X	./include/project/backup/zx_a0_graphics.h	15;"	d
+TERMINAL_POS_X	./include/project/zx_project_graphics.h	15;"	d
+TERMINAL_POS_Y	./include/project/backup/zx_a0_graphics.h	16;"	d
+TERMINAL_POS_Y	./include/project/zx_project_graphics.h	16;"	d
+TERMINAL_PROMPT_LEN	./include/project/backup/zx_a0_graphics.h	17;"	d
+TERMINAL_PROMPT_LEN	./include/project/zx_project_graphics.h	17;"	d
+TIE_MASK	./include/kernel/zx_irq_device.h	31;"	d
+TIMER1_INTR_MASK	./include/kernel/zx_irq_vic.h	25;"	d
+TIMER3_CONTROL	./include/project/backup/zx_a0_timer.h	15;"	d
+TIMER3_CONTROL	./include/project/zx_project_timer.h	15;"	d
+TIMER3_DIS_MASK	./include/project/backup/zx_a0_timer.h	17;"	d
+TIMER3_DIS_MASK	./include/project/zx_project_timer.h	17;"	d
+TIMER3_EN_MASK	./include/project/backup/zx_a0_timer.h	16;"	d
+TIMER3_EN_MASK	./include/project/zx_project_timer.h	16;"	d
+TIMER3_MODE_PERIODIC	./include/project/backup/zx_a0_timer.h	18;"	d
+TIMER3_MODE_PERIODIC	./include/project/zx_project_timer.h	18;"	d
+TIMER_1	./include/kernel/zx_timer.h	24;"	d
+TIMER_2	./include/kernel/zx_timer.h	25;"	d
+TIMER_2KHZ_CLKSEL_MASK	./include/kernel/zx_timer.h	34;"	d
+TIMER_3	./include/kernel/zx_timer.h	26;"	d
+TIMER_508KHZ_CLKSEL_MASK	./include/kernel/zx_timer.h	35;"	d
+TIMER_CLEAR_OFFSET	./include/kernel/zx_timer.h	37;"	d
+TIMER_CONTROL_OFFSET	./include/kernel/zx_timer.h	30;"	d
+TIMER_CONTROL_REGISTER	./include/project/backup/zx_a0_timer.h	11;"	d
+TIMER_CONTROL_REGISTER	./include/project/zx_project_timer.h	11;"	d
+TIMER_ENABLE_MASK	./include/kernel/zx_timer.h	32;"	d
+TIMER_LOAD_OFFSET	./include/kernel/zx_timer.h	28;"	d
+TIMER_LOAD_REGISTER	./include/project/backup/zx_a0_timer.h	12;"	d
+TIMER_LOAD_REGISTER	./include/project/zx_project_timer.h	12;"	d
+TIMER_MAX_VALUE	./include/project/backup/zx_a0_timer.h	20;"	d
+TIMER_MAX_VALUE	./include/project/zx_project_timer.h	20;"	d
+TIMER_PERIODIC_MODE_MASK	./include/kernel/zx_timer.h	33;"	d
+TIMER_POS_X	./include/project/backup/zx_a0.h	61;"	d
+TIMER_POS_X	./include/project/backup/zx_a0_timer.h	24;"	d
+TIMER_POS_X	./include/project/zx_project.h	61;"	d
+TIMER_POS_X	./include/project/zx_project_timer.h	24;"	d
+TIMER_POS_Y	./include/project/backup/zx_a0.h	62;"	d
+TIMER_POS_Y	./include/project/backup/zx_a0_timer.h	25;"	d
+TIMER_POS_Y	./include/project/zx_project.h	62;"	d
+TIMER_POS_Y	./include/project/zx_project_timer.h	25;"	d
+TIMER_READ_REGISTER	./include/project/backup/zx_a0_timer.h	13;"	d
+TIMER_READ_REGISTER	./include/project/zx_project_timer.h	13;"	d
+TIMER_VALUE_OFFSET	./include/kernel/zx_timer.h	29;"	d
+TIME_REQUEST_CONFIG	./include/kernel/zx_tasks.h	149;"	d
+TIME_REQUEST_NONE	./include/kernel/zx_tasks.h	136;"	d
+TIME_REQUEST_READY	./include/kernel/zx_tasks.h	137;"	d
+TIME_REQUEST_TICK	./include/kernel/zx_tasks.h	138;"	d
+TIS_MASK	./include/kernel/zx_irq_device.h	46;"	d
+TRACK_A	./include/project/backup/zx_track_data.h	20;"	d
+TRACK_A	./include/project/zx_project_track_data.h	20;"	d
+TRACK_B	./include/project/backup/zx_track_data.h	21;"	d
+TRACK_B	./include/project/zx_project_track_data.h	21;"	d
+TRACK_MAX	./include/project/backup/zx_track_data.h	18;"	d
+TRACK_MAX	./include/project/zx_project_track_data.h	18;"	d
+TRACK_SENSING_H	./include/project/backup/zx_track_sensing.h	10;"	d
+TRACK_SENSING_H	./include/project/zx_project_track_sensing.h	10;"	d
+TRACK_STATE_INIT	./include/project/backup/zx_track_sensing.h	189;"	d
+TRACK_STATE_INIT	./include/project/zx_project_track_sensing.h	189;"	d
+TRACK_STATE_RUN	./include/project/backup/zx_track_sensing.h	190;"	d
+TRACK_STATE_RUN	./include/project/zx_project_track_sensing.h	190;"	d
+TRACK_STATE_RUN_FIRST	./include/project/backup/zx_track_sensing.h	193;"	d
+TRACK_STATE_RUN_FIRST	./include/project/zx_project_track_sensing.h	193;"	d
+TRACK_STATE_STOP_WAIT	./include/project/backup/zx_track_sensing.h	192;"	d
+TRACK_STATE_STOP_WAIT	./include/project/zx_project_track_sensing.h	192;"	d
+TRACK_STATE_UI_WAIT	./include/project/backup/zx_track_sensing.h	191;"	d
+TRACK_STATE_UI_WAIT	./include/project/zx_project_track_sensing.h	191;"	d
+TRAIN_BUF_SIZE	./src/project/backup before refactoring/zx_a0_main.c	288;"	d	file:
+TRAIN_COUNT	./include/project/backup/zx_track_sensing.h	132;"	d
+TRAIN_COUNT	./include/project/zx_project_track_sensing.h	132;"	d
+TRAIN_HT_LENGTH	./include/project/backup/zx_track_sensing.h	50;"	d
+TRAIN_HT_LENGTH	./include/project/zx_project_track_sensing.h	50;"	d
+TRAIN_LED	./include/project/backup/zx_a0.h	40;"	d
+TRAIN_LED	./include/project/zx_project.h	40;"	d
+TRAIN_STATE_ACCELERATING	./include/project/backup/zx_track_sensing.h	205;"	d
+TRAIN_STATE_ACCELERATING	./include/project/zx_project_track_sensing.h	205;"	d
+TRAIN_STATE_DECCELERATING	./include/project/backup/zx_track_sensing.h	207;"	d
+TRAIN_STATE_DECCELERATING	./include/project/zx_project_track_sensing.h	207;"	d
+TRAIN_STATE_IMMOBILE	./include/project/backup/zx_track_sensing.h	204;"	d
+TRAIN_STATE_IMMOBILE	./include/project/zx_project_track_sensing.h	204;"	d
+TRAIN_STATE_UNIFORM	./include/project/backup/zx_track_sensing.h	206;"	d
+TRAIN_STATE_UNIFORM	./include/project/zx_project_track_sensing.h	206;"	d
+TRANSMISSION_ERROR	./include/kernel/zx_err.h	32;"	d
+TRUE	./include/kernel/zx_helper.h	45;"	d
+TR_CMD	./include/project/backup/zx_a0.h	15;"	d
+TR_CMD	./include/project/zx_project.h	15;"	d
+TURNOUT_BUF_SIZE	./include/project/backup/zx_track_sensing.h	201;"	d
+TURNOUT_BUF_SIZE	./include/project/zx_project_track_sensing.h	201;"	d
+TURNOUT_STATE_CURVED	./include/project/backup/zx_track_sensing.h	199;"	d
+TURNOUT_STATE_CURVED	./include/project/zx_project_track_sensing.h	199;"	d
+TURNOUT_STATE_STRAIGHT	./include/project/backup/zx_track_sensing.h	198;"	d
+TURNOUT_STATE_STRAIGHT	./include/project/zx_project_track_sensing.h	198;"	d
+Time	./src/kernel/zx_system_calls.c	/^int Time()$/;"	f
+UART1_BASE_ADDR	./include/kernel/zx_irq_device.h	16;"	d
+UART1_BAUD_RATE	./include/kernel/zx_uart_io.h	19;"	d
+UART1_BUSY	./include/kernel/zx_uart_io.h	13;"	d
+UART1_BUSY_MASK	./include/kernel/zx_uart_io.h	17;"	d
+UART1_CONTROL	./include/kernel/zx_irq_device.h	23;"	d
+UART1_CTRL	./include/kernel/zx_uart_io.h	10;"	d
+UART1_CTS_MASK	./include/kernel/zx_uart_io.h	16;"	d
+UART1_DATA	./include/kernel/zx_uart_io.h	12;"	d
+UART1_FLAG	./include/kernel/zx_uart_io.h	11;"	d
+UART1_INTR_MASK	./include/kernel/zx_irq_vic.h	29;"	d
+UART1_LCRTL_H_CONFIG	./include/kernel/zx_uart_io.h	27;"	d
+UART1_LCTRL_H	./include/kernel/zx_uart_io.h	7;"	d
+UART1_LCTRL_L	./include/kernel/zx_uart_io.h	9;"	d
+UART1_LCTRL_M	./include/kernel/zx_uart_io.h	8;"	d
+UART1_RX_SERVER_TID	./include/kernel/zx_kernel_config.h	91;"	d
+UART1_STATUS	./include/kernel/zx_irq_device.h	38;"	d
+UART1_TXFF_MASK	./include/kernel/zx_uart_io.h	15;"	d
+UART1_TX_SERVER_TID	./include/kernel/zx_kernel_config.h	90;"	d
+UART2_BASE_ADDR	./include/kernel/zx_irq_device.h	17;"	d
+UART2_CONTROL	./include/kernel/zx_irq_device.h	24;"	d
+UART2_INTR_MASK	./include/kernel/zx_irq_vic.h	32;"	d
+UART2_RX_SERVER_TID	./include/kernel/zx_kernel_config.h	93;"	d
+UART2_STATUS	./include/kernel/zx_irq_device.h	39;"	d
+UART2_TX_SERVER_TID	./include/kernel/zx_kernel_config.h	92;"	d
+UART_PACKET_END_CHAR	./include/kernel/zx_tasks.h	204;"	d
+UART_REQUEST_CONFIG	./include/kernel/zx_tasks.h	188;"	d
+UART_REQUEST_NONE	./include/kernel/zx_tasks.h	167;"	d
+UART_REQUEST_READY	./include/kernel/zx_tasks.h	168;"	d
+UART_REQUEST_TICK	./include/kernel/zx_tasks.h	169;"	d
+UART_RX_ERROR	./include/kernel/zx_tasks.h	193;"	d
+UART_RX_SUCCESS	./include/kernel/zx_tasks.h	194;"	d
+UART_TX_ERROR	./include/kernel/zx_tasks.h	190;"	d
+UART_TX_SUCCESS	./include/kernel/zx_tasks.h	191;"	d
+UART_WRITE_BYTE	./include/kernel/zx_tasks.h	186;"	d
+USER_STACK_SPACE_BASE	./include/kernel/zx_kernel_config.h	61;"	d
+VALUE	./include/project/backup/zx_track_data.h	35;"	d
+VALUE	./include/project/zx_project_track_data.h	35;"	d
+VALUE_TO_STRING	./include/project/backup/zx_track_data.h	34;"	d
+VALUE_TO_STRING	./include/project/zx_project_track_data.h	34;"	d
+VAR_IDLE_TASK_TIME	./include/kernel/zx_kernel_config.h	95;"	d
+VAR_MODEM_CTS_ON	./include/kernel/zx_kernel_config.h	97;"	d
+VAR_NAME_VALUE	./include/project/backup/zx_track_data.h	36;"	d
+VAR_NAME_VALUE	./include/project/zx_project_track_data.h	36;"	d
+VAR_OLD_UART1_FLAG	./include/kernel/zx_kernel_config.h	98;"	d
+VAR_TXFE_ON	./include/kernel/zx_kernel_config.h	99;"	d
+VIC1_BASE	./include/kernel/zx_irq_vic.h	38;"	d
+VIC2_BASE	./include/kernel/zx_irq_vic.h	39;"	d
+WAYPOINT_COUNT	./include/project/backup/zx_track_sensing.h	69;"	d
+WAYPOINT_COUNT	./include/project/zx_project_track_sensing.h	69;"	d
+WH_CMD	./include/project/backup/zx_a0.h	18;"	d
+WH_CMD	./include/project/zx_project.h	18;"	d
+WhoIs	./src/kernel/zx_system_calls.c	/^int  WhoIs( char* name )$/;"	f
+YES	./include/project/backup/zx_shortest_path.h	11;"	d
+YES	./include/project/zx_project_shortest_path.h	11;"	d
+ZXERR_UART_INVALID_CHANNEL	./include/kernel/zx_tasks.h	201;"	d
+ZX_A0	./include/project/backup/zx_a0.h	10;"	d
+ZX_A0	./include/project/zx_project.h	10;"	d
+ZX_A0_GRAPHICS_H	./include/project/backup/zx_a0_graphics.h	7;"	d
+ZX_A0_GRAPHICS_H	./include/project/zx_project_graphics.h	7;"	d
+ZX_A0_TIMER	./include/project/backup/zx_a0_timer.h	7;"	d
+ZX_A0_TIMER	./include/project/zx_project_timer.h	7;"	d
+ZX_A0_UTILITIES	./include/project/backup/zx_a0_utilities.h	10;"	d
+ZX_A0_UTILITIES	./include/project/zx_project_utilities.h	10;"	d
+ZX_CALIBRATION_H	./include/project/backup/zx_calibration.h	14;"	d
+ZX_CALIBRATION_H	./include/project/zx_project_calibration.h	14;"	d
+ZX_CLOCKSERVER_HEAP	./include/kernel/zx_clockserver_heap.h	9;"	d
+ZX_CLOCK_NOTIFIER_PRIORITY	./include/kernel/zx_tasks.h	90;"	d
+ZX_CLOCK_SERVER_PRIORITY	./include/kernel/zx_tasks.h	91;"	d
+ZX_ERRMSG_QUEUE_EMPTY	./include/kernel/zx_queue.h	32;"	d
+ZX_ERRMSG_QUEUE_FULL	./include/kernel/zx_queue.h	31;"	d
+ZX_ERR_QUEUE_EMPTY	./include/kernel/zx_queue.h	28;"	d
+ZX_ERR_QUEUE_FULL	./include/kernel/zx_queue.h	29;"	d
+ZX_HELPER	./include/kernel/zx_helper.h	10;"	d
+ZX_INFINITY	./include/project/backup/zx_shortest_path.h	10;"	d
+ZX_INFINITY	./include/project/zx_project_shortest_path.h	10;"	d
+ZX_IRQ	./include/kernel/zx_irq_vic.h	14;"	d
+ZX_IRQ_DEVICE_H	./include/kernel/zx_irq_device.h	10;"	d
+ZX_KERNEL_BODY	./include/kernel/zx_kernel_body.h	20;"	d
+ZX_KERNEL_CONFIG	./include/kernel/zx_kernel_config.h	24;"	d
+ZX_KERNEL_ERR_CODES	./include/kernel/zx_err.h	12;"	d
+ZX_KERNEL_ERR_MSG	./include/kernel/zx_err_strings.h	12;"	d
+ZX_KERNEL_HEAD	./include/kernel/zx_kernel_head.h	11;"	d
+ZX_KERNEL_TESTING	./include/kernel/zx_testing.h	11;"	d
+ZX_KERNEL_TRACK_DATA	./include/project/backup/zx_track_data.h	13;"	d
+ZX_KERNEL_TRACK_DATA	./include/project/zx_project_track_data.h	13;"	d
+ZX_KERNEL_TRACK_NODE	./include/project/backup/zx_track_node.h	11;"	d
+ZX_KERNEL_TRACK_NODE	./include/project/zx_project_track_node.h	11;"	d
+ZX_MEMORY	./include/kernel/zx_memory.h	9;"	d
+ZX_NAME_SERVER_PRIORITY	./include/kernel/zx_tasks.h	105;"	d
+ZX_NS	./include/kernel/zx_ns.h	9;"	d
+ZX_NS_TREE	./include/kernel/zx_ns_tree.h	9;"	d
+ZX_QUEUE	./include/kernel/zx_ready_queue.h	11;"	d
+ZX_Q_SUCCESS	./include/kernel/zx_queue.h	27;"	d
+ZX_SENSOR_H	./include/project/backup/zx_sensor.h	12;"	d
+ZX_SENSOR_H	./include/project/zx_project_sensor.h	12;"	d
+ZX_SYSTEM_CALLS	./include/kernel/zx_system_calls.h	11;"	d
+ZX_SYSTEM_CALL_HANDLERS	./include/kernel/zx_system_call_handlers.h	13;"	d
+ZX_TASKS	./include/kernel/zx_tasks.h	13;"	d
+ZX_TIMER_H	./include/kernel/zx_timer.h	12;"	d
+ZX_TRACK_FUNCTIONS_H	./include/project/backup/zx_track_functions.h	10;"	d
+ZX_TRACK_FUNCTIONS_H	./include/project/zx_project_track_functions.h	10;"	d
+ZX_TRAIN_FUNCTIONS_H	./include/project/backup/zx_train_functions.h	10;"	d
+ZX_TRAIN_FUNCTIONS_H	./include/project/zx_project_train_functions.h	10;"	d
+ZX_UART1_RX_BUFFER_SIZE	./include/kernel/zx_tasks.h	199;"	d
+ZX_UART1_RX_NOTIFIER_PRIORITY	./include/kernel/zx_tasks.h	96;"	d
+ZX_UART1_RX_SERVER_PRIORITY	./include/kernel/zx_tasks.h	97;"	d
+ZX_UART1_TX_BUFFER_SIZE	./include/kernel/zx_tasks.h	198;"	d
+ZX_UART1_TX_NOTIFIER_PRIORITY	./include/kernel/zx_tasks.h	93;"	d
+ZX_UART1_TX_SERVER_PRIORITY	./include/kernel/zx_tasks.h	94;"	d
+ZX_UART2_RX_BUFFER_SIZE	./include/kernel/zx_tasks.h	197;"	d
+ZX_UART2_RX_NOTIFIER_PRIORITY	./include/kernel/zx_tasks.h	102;"	d
+ZX_UART2_RX_SERVER_PRIORITY	./include/kernel/zx_tasks.h	103;"	d
+ZX_UART2_TX_BUFFER_SIZE	./include/kernel/zx_tasks.h	196;"	d
+ZX_UART2_TX_NOTIFIER_PRIORITY	./include/kernel/zx_tasks.h	99;"	d
+ZX_UART2_TX_SERVER_PRIORITY	./include/kernel/zx_tasks.h	100;"	d
+ZX_UI_H	./include/project/backup/zx_ui.h	13;"	d
+ZX_UI_H	./include/project/zx_project_ui.h	13;"	d
+__va_argsiz	./include/kernel/zx_uart_io.h	33;"	d
+acceleration_profile_testing	./src/project/zx_project_track_sensing.c	/^void acceleration_profile_testing()$/;"	f
+add_byte_to_buff	./src/project/backup before refactoring/zx_a0_main.c	/^int add_byte_to_buff( char c, char *buffer, int pos )$/;"	f
+add_byte_to_buff	./src/project/backup before refactoring/zx_train_a0.c	/^int add_byte_to_buff( char c, char *buffer, int pos )$/;"	f
+arg1	./include/kernel/zx_kernel_body.h	/^      int* arg1;$/;"	m	struct:__anon3
+arg1	./include/project/backup/zx_ui.h	/^   int arg1;$/;"	m	struct:__anon36
+arg1	./include/project/zx_project_ui.h	/^   int arg1;$/;"	m	struct:__anon22
+arg2	./include/kernel/zx_kernel_body.h	/^      int* arg2;$/;"	m	struct:__anon3
+arg2	./include/project/backup/zx_ui.h	/^   int arg2;$/;"	m	struct:__anon36
+arg2	./include/project/zx_project_ui.h	/^   int arg2;$/;"	m	struct:__anon22
+arg3	./include/kernel/zx_kernel_body.h	/^      int* arg3;$/;"	m	struct:__anon3
+arg3	./include/project/backup/zx_ui.h	/^   int arg3;$/;"	m	struct:__anon36
+arg3	./include/project/zx_project_ui.h	/^   int arg3;$/;"	m	struct:__anon22
+arg4	./include/kernel/zx_kernel_body.h	/^      int* arg4;$/;"	m	struct:__anon3
+arg4	./include/project/backup/zx_ui.h	/^   int arg4;$/;"	m	struct:__anon36
+arg4	./include/project/zx_project_ui.h	/^   int arg4;$/;"	m	struct:__anon22
+arg5	./include/kernel/zx_kernel_body.h	/^      int* arg5;$/;"	m	struct:__anon3
+arg6	./include/kernel/zx_kernel_body.h	/^      int* arg6;$/;"	m	struct:__anon3
+arg7	./include/kernel/zx_kernel_body.h	/^      int* arg7;$/;"	m	struct:__anon3
+atoi	./src/project/backup before refactoring/zx_a0_utilities.c	/^int atoi( char *string )$/;"	f
+atoi	./src/project/zx_project_utilities.c	/^int atoi( char *string )$/;"	f
+bst_node	./include/kernel/zx_ns_tree.h	/^typedef struct bst_node{$/;"	s
+bw_print_switch_table_header	./src/project/backup before refactoring/zx_train_a0.c	/^int bw_print_switch_table_header( int x, int y )$/;"	f
+bw_update_switch_entry	./src/project/backup before refactoring/zx_train_a0.c	/^int bw_update_switch_entry( int switch_number, char switch_state )$/;"	f
+count	./src/kernel/zx_testing.c	/^   int count;$/;"	m	struct:__anon1	file:
+current_velocity	./include/project/backup/zx_track_sensing.h	/^      int current_velocity; \/\/ the current velocity we calculate at each step becomes initial velocity for next step$/;"	m	struct:__anon29
+current_velocity	./include/project/zx_project_track_sensing.h	/^      int current_velocity; \/\/ the current velocity we calculate at each step becomes initial velocity for next step$/;"	m	struct:__anon15
+data_column	./src/project/zx_project_ui.c	27;"	d	file:
+data_size	./include/kernel/zx_queue.h	/^      int  data_size; \/\/ in bytes$/;"	m	struct:__anon5
+debug_bst_traverse_postorder	./src/kernel/zx_ns_tree.c	/^void debug_bst_traverse_postorder( zx_bst_node *root )$/;"	f
+debug_many_args	./src/kernel/zx_system_call_handlers.c	/^int debug_many_args( zx_request* req)$/;"	f
+debug_print_clockserver_heap	./src/kernel/zx_clockserver_heap.c	/^ void debug_print_clockserver_heap( zx_clockserver_heap_node *heap, int index )$/;"	f
+debug_print_list	./src/kernel/zx_helper.c	/^void debug_print_list()$/;"	f
+debug_print_receive_queue	./src/kernel/zx_helper.c	/^void debug_print_receive_queue( int receiver_tid )$/;"	f
+debug_print_stack	./src/kernel/zx_helper.c	/^void debug_print_stack(int stack_register, int* source)$/;"	f
+debug_walk_heap	./src/kernel/zx_memory.c	/^int debug_walk_heap( )$/;"	f
+dest	./include/project/backup/zx_track_node.h	/^     track_node *src, *dest;$/;"	m	struct:track_edge
+dest	./include/project/zx_project_track_node.h	/^     track_node *src, *dest;$/;"	m	struct:track_edge
+destination_id	./include/project/backup/zx_track_sensing.h	/^      int destination_id;   $/;"	m	struct:__anon34
+destination_id	./include/project/zx_project_track_sensing.h	/^      int destination_id;   $/;"	m	struct:__anon20
+direction	./include/project/backup/zx_track_sensing.h	/^      int direction; \/\/ 1 for ahead, -1 for reverse$/;"	m	struct:__anon29
+direction	./include/project/zx_project_track_sensing.h	/^      int direction; \/\/ 1 for ahead, -1 for reverse$/;"	m	struct:__anon15
+dist	./include/project/backup/zx_track_node.h	/^     int dist;             \/* in millimetres *\/$/;"	m	struct:track_edge
+dist	./include/project/backup/zx_track_sensing.h	/^      int dist; \/\/ distance of the train from any last node in case of last node info$/;"	m	struct:__anon24
+dist	./include/project/backup/zx_track_sensing.h	/^      int dist; \/\/ distance of the train from any last node in case of last node info$/;"	m	struct:__anon25
+dist	./include/project/zx_project_track_node.h	/^     int dist;             \/* in millimetres *\/$/;"	m	struct:track_edge
+dist	./include/project/zx_project_track_sensing.h	/^      int dist; \/\/ distance of the train from any last node in case of last node info$/;"	m	struct:__anon10
+dist	./include/project/zx_project_track_sensing.h	/^      int dist; \/\/ distance of the train from any last node in case of last node info$/;"	m	struct:__anon11
+distance	./include/project/backup/zx_track_sensing.h	/^      int distance; \/\/ distance to the waypoint$/;"	m	struct:__anon27
+distance	./include/project/zx_project_track_sensing.h	/^      int distance; \/\/ distance to the waypoint$/;"	m	struct:__anon13
+distance_to_node	./include/project/backup/zx_track_sensing.h	/^      int distance_to_node;$/;"	m	struct:__anon26
+distance_to_node	./include/project/zx_project_track_sensing.h	/^      int distance_to_node;$/;"	m	struct:__anon12
+distance_travelled_in_delta	./include/project/backup/zx_track_sensing.h	/^      int distance_travelled_in_delta;$/;"	m	struct:__anon29
+distance_travelled_in_delta	./include/project/zx_project_track_sensing.h	/^      int distance_travelled_in_delta;$/;"	m	struct:__anon15
+edge	./include/project/backup/zx_track_node.h	/^     track_edge edge[2];$/;"	m	struct:track_node
+edge	./include/project/backup/zx_track_sensing.h	/^      track_edge* edge;$/;"	m	struct:__anon25
+edge	./include/project/zx_project_track_node.h	/^     track_edge edge[2];$/;"	m	struct:track_node
+edge	./include/project/zx_project_track_sensing.h	/^      track_edge* edge;$/;"	m	struct:__anon11
+expected_sensors	./include/project/backup/zx_track_sensing.h	/^      zx_node_info expected_sensors[NEXT_SENSOR_COUNT];$/;"	m	struct:__anon29
+expected_sensors	./include/project/zx_project_track_sensing.h	/^      zx_node_info expected_sensors[NEXT_SENSOR_COUNT];$/;"	m	struct:__anon15
+expected_time	./include/project/backup/zx_track_sensing.h	/^      int expected_time;$/;"	m	struct:__anon30
+expected_time	./include/project/zx_project_track_sensing.h	/^      int expected_time;$/;"	m	struct:__anon16
+final_velocity	./include/project/backup/zx_track_sensing.h	/^      int final_velocity;   \/\/ v1$/;"	m	struct:__anon29
+final_velocity	./include/project/zx_project_track_sensing.h	/^      int final_velocity;   \/\/ v1$/;"	m	struct:__anon15
+find_command_value	./src/project/backup before refactoring/zx_a0_utilities.c	/^int find_command_value( char *command )$/;"	f
+find_command_value	./src/project/backup before refactoring/zx_train_a0.c	/^int find_command_value( char *command )$/;"	f
+find_command_value	./src/project/zx_project_utilities.c	/^int find_command_value( char *command )$/;"	f
+find_next_bit_set	./src/kernel/zx_helper.c	/^int find_next_bit_set( unsigned char byte , int pos )$/;"	f
+find_next_bit_set	./src/project/backup before refactoring/zx_train_a0.c	/^int find_next_bit_set( char byte , int pos )$/;"	f
+find_sensor_name	./src/project/backup before refactoring/zx_a0_main.c	/^void find_sensor_name( char *name, int byte_index, int pos )$/;"	f
+find_sensor_name	./src/project/backup before refactoring/zx_train_a0.c	/^void find_sensor_name( char *name, int byte_index, int pos )$/;"	f
+find_shortest_distance_node	./src/project/zx_project_shortest_path.c	/^int find_shortest_distance_node( int distance[], char visited[])$/;"	f
+hash_value	./include/kernel/zx_ns_tree.h	/^   int hash_value;$/;"	m	struct:bst_node
+head	./include/kernel/zx_queue.h	/^      int  head;$/;"	m	struct:__anon5
+head_pos	./include/project/backup/zx_track_sensing.h	/^      zx_train_pos head_pos; \/\/ done --$/;"	m	struct:__anon29
+head_pos	./include/project/zx_project_track_sensing.h	/^      zx_train_pos head_pos; \/\/ done --$/;"	m	struct:__anon15
+header_column	./src/project/zx_project_ui.c	26;"	d	file:
+heap_chunk	./include/kernel/zx_memory.h	/^  typedef struct heap_chunk{$/;"	s
+heap_head	./include/kernel/zx_tasks.h	/^         zx_heap_chunk* heap_head; \/\/ heap head$/;"	m	struct:task_descriptor
+heap_node	./include/kernel/zx_clockserver_heap.h	/^  typedef struct heap_node{$/;"	s
+heap_tail	./include/kernel/zx_tasks.h	/^         zx_heap_chunk* heap_tail; \/\/ heap tail$/;"	m	struct:task_descriptor
+heap_test	./src/kernel/zx_testing.c	/^void heap_test()$/;"	f
+id	./include/project/backup/zx_track_sensing.h	/^      int id;$/;"	m	struct:__anon33
+id	./include/project/zx_project_track_sensing.h	/^      int id;$/;"	m	struct:__anon19
+id	./src/project/backup before refactoring/zx_a0_main.c	/^   int id;$/;"	m	struct:__anon2	file:
+include_reverse	./include/project/backup/zx_track_sensing.h	/^      int include_reverse;$/;"	m	struct:__anon34
+include_reverse	./include/project/zx_project_track_sensing.h	/^      int include_reverse;$/;"	m	struct:__anon20
+index	./include/project/backup/zx_track_node.h	/^     int index; \/\/ this is a very useful varaible since we store this as array$/;"	m	struct:track_node
+index	./include/project/zx_project_track_node.h	/^     int index; \/\/ this is a very useful varaible since we store this as array$/;"	m	struct:track_node
+init_tracka	./src/project/zx_project_track_data.c	/^void init_tracka(track_node *track) {$/;"	f
+init_trackb	./src/project/zx_project_track_data.c	/^void init_trackb(track_node *track) {$/;"	f
+initial_velocity	./include/project/backup/zx_track_sensing.h	/^      int initial_velocity; \/\/ v0$/;"	m	struct:__anon29
+initial_velocity	./include/project/zx_project_track_sensing.h	/^      int initial_velocity; \/\/ v0$/;"	m	struct:__anon15
+input_row	./src/project/zx_project_ui.c	29;"	d	file:
+input_row_header	./src/project/zx_project_ui.c	28;"	d	file:
+is_empty_flag	./include/kernel/zx_queue.h	/^      int  is_empty_flag;$/;"	m	struct:__anon5
+is_full_flag	./include/kernel/zx_queue.h	/^      int  is_full_flag;$/;"	m	struct:__anon5
+k3_request	./src/kernel/zx_testing.c	/^} k3_request;$/;"	t	typeref:struct:__anon1	file:
+last_sensor_id	./include/project/backup/zx_track_sensing.h	/^      int last_sensor_id;$/;"	m	struct:__anon29
+last_sensor_id	./include/project/zx_project_track_sensing.h	/^      int last_sensor_id;$/;"	m	struct:__anon15
+left	./include/kernel/zx_ns_tree.h	/^   struct bst_node *left;$/;"	m	struct:bst_node	typeref:struct:bst_node::bst_node
+left_left_rotation	./src/kernel/zx_ns_tree.c	/^zx_bst_node* left_left_rotation(zx_bst_node* parent)$/;"	f
+left_right_rotation	./src/kernel/zx_ns_tree.c	/^zx_bst_node* left_right_rotation(zx_bst_node* parent)$/;"	f
+main	./src/generator.c	/^int main()$/;"	f
+main	./src/kernel/zx_kernel_head.c	/^int main( int argc, char *argv[])$/;"	f
+main	./src/project/backup before refactoring/zx_train_a0.c	/^int main() {$/;"	f
+msg	./include/kernel/zx_ready_queue.h	/^      void   *msg;$/;"	m	struct:receive_queue_node
+msglen	./include/kernel/zx_ready_queue.h	/^      int     msglen;$/;"	m	struct:receive_queue_node
+name	./include/kernel/zx_ns.h	/^   char* name;$/;"	m	struct:__anon4
+name	./include/project/backup/zx_track_node.h	/^     char *name;$/;"	m	struct:track_node
+name	./include/project/zx_project_track_node.h	/^     char *name;$/;"	m	struct:track_node
+nameserver_task	./src/kernel/zx_testing.c	/^void nameserver_task()$/;"	f
+next	./include/kernel/zx_memory.h	/^      struct heap_chunk *next;$/;"	m	struct:heap_chunk	typeref:struct:heap_chunk::heap_chunk
+next	./include/kernel/zx_ready_queue.h	/^      struct  receive_queue_node *next;$/;"	m	struct:receive_queue_node	typeref:struct:receive_queue_node::receive_queue_node
+next	./include/kernel/zx_ready_queue.h	/^      struct ready_queue *next;$/;"	m	struct:ready_queue	typeref:struct:ready_queue::ready_queue
+node	./include/project/backup/zx_track_sensing.h	/^      track_node* node;$/;"	m	struct:__anon24
+node	./include/project/backup/zx_track_sensing.h	/^      track_node* node;$/;"	m	struct:__anon25
+node	./include/project/backup/zx_track_sensing.h	/^      track_node* node;$/;"	m	struct:__anon26
+node	./include/project/zx_project_track_sensing.h	/^      track_node* node;$/;"	m	struct:__anon10
+node	./include/project/zx_project_track_sensing.h	/^      track_node* node;$/;"	m	struct:__anon11
+node	./include/project/zx_project_track_sensing.h	/^      track_node* node;$/;"	m	struct:__anon12
+node_id	./include/project/backup/zx_track_sensing.h	/^      int node_id;$/;"	m	struct:__anon27
+node_id	./include/project/zx_project_track_sensing.h	/^      int node_id;$/;"	m	struct:__anon13
+node_name_to_id	./src/project/backup before refactoring/zx_a0_utilities.c	/^int node_name_to_id( char *node_name )$/;"	f
+node_name_to_id	./src/project/zx_project_utilities.c	/^int node_name_to_id( char *node_name )$/;"	f
+node_type	./include/project/backup/zx_track_node.h	/^   } node_type;$/;"	t	typeref:enum:__anon23
+node_type	./include/project/zx_project_track_node.h	/^   } node_type;$/;"	t	typeref:enum:__anon9
+ns_test_task	./src/kernel/zx_testing.c	/^   void ns_test_task()$/;"	f
+num	./include/project/backup/zx_track_node.h	/^     int num;              \/* sensor or switch number *\/$/;"	m	struct:track_node
+num	./include/project/zx_project_track_node.h	/^     int num;              \/* sensor or switch number *\/$/;"	m	struct:track_node
+num_to_string	./src/project/backup before refactoring/zx_a0_utilities.c	/^ void num_to_string( unsigned int num, unsigned int base, char *bf ) {$/;"	f
+num_to_string	./src/project/zx_project_utilities.c	/^ void num_to_string( unsigned int num, unsigned int base, char *bf ) {$/;"	f
+offset	./include/project/backup/zx_track_sensing.h	/^      int offset;$/;"	m	struct:__anon27
+offset	./include/project/zx_project_track_sensing.h	/^      int offset;$/;"	m	struct:__anon13
+offset_from_node	./include/project/backup/zx_track_sensing.h	/^      int offset_from_node; $/;"	m	struct:__anon26
+offset_from_node	./include/project/zx_project_track_sensing.h	/^      int offset_from_node; $/;"	m	struct:__anon12
+pid	./include/kernel/zx_tasks.h	/^         int pid;          \/\/ parent task id$/;"	m	struct:task_descriptor
+prev	./include/kernel/zx_ready_queue.h	/^      struct ready_queue *prev;$/;"	m	struct:ready_queue	typeref:struct:ready_queue::ready_queue
+print_difference	./src/kernel/zx_testing.c	/^void print_difference(int diff)$/;"	f
+print_initial_screen	./src/project/zx_project_ui.c	/^void print_initial_screen()$/;"	f
+print_prompt	./src/project/backup before refactoring/zx_a0_main.c	/^int print_prompt( char *prompt, char output[], int *output_size )$/;"	f
+print_prompt	./src/project/backup before refactoring/zx_train_a0.c	/^int print_prompt( char *prompt, char *buffer, int *pos, int len )$/;"	f
+print_row	./include/project/backup/zx_track_sensing.h	/^      int print_row;$/;"	m	struct:__anon34
+print_row	./include/project/zx_project_track_sensing.h	/^      int print_row;$/;"	m	struct:__anon20
+print_sensor_table_header	./src/project/backup before refactoring/zx_train_a0.c	/^void print_sensor_table_header( int x, int y )$/;"	f
+print_train_data	./src/project/zx_project_ui.c	/^void print_train_data(track_node* track, zx_train* train, int idle_task_percent )$/;"	f
+priority	./include/kernel/zx_tasks.h	/^         int priority;     \/\/ task priority$/;"	m	struct:task_descriptor
+process_command	./src/project/backup before refactoring/zx_a0_utilities.c	/^int process_command( char *buffer, int *arg1, int *arg2, int *arg3, int *arg4)$/;"	f
+process_command	./src/project/backup before refactoring/zx_train_a0.c	/^int process_command( char *buffer, int *arg1, int *arg2, int *arg3)$/;"	f
+process_command	./src/project/zx_project_utilities.c	/^int process_command( char *buffer, int *arg1, int *arg2, int *arg3, int *arg4)$/;"	f
+queue	./include/kernel/zx_queue.h	/^      void *queue;$/;"	m	struct:__anon5
+queue_size	./include/kernel/zx_queue.h	/^      int  queue_size; \/\/ number of elements in the queue$/;"	m	struct:__anon5
+ready_queue	./include/kernel/zx_ready_queue.h	/^   typedef struct ready_queue{$/;"	s
+receive_from_uart1	./src/kernel/zx_testing.c	/^void receive_from_uart1()$/;"	f
+receive_queue_node	./include/kernel/zx_ready_queue.h	/^   typedef struct receive_queue_node{$/;"	s
+receiver_task	./src/kernel/zx_testing.c	/^   void receiver_task()$/;"	f
+return_value	./include/kernel/zx_tasks.h	/^         int return_value; \/\/ return value$/;"	m	struct:task_descriptor
+reverse	./include/project/backup/zx_track_node.h	/^     track_edge *reverse;$/;"	m	struct:track_edge
+reverse	./include/project/backup/zx_track_node.h	/^     track_node *reverse;  \/* same location, but opposite direction *\/$/;"	m	struct:track_node
+reverse	./include/project/zx_project_track_node.h	/^     track_edge *reverse;$/;"	m	struct:track_edge
+reverse	./include/project/zx_project_track_node.h	/^     track_node *reverse;  \/* same location, but opposite direction *\/$/;"	m	struct:track_node
+reverse_offset	./include/project/backup/zx_shortest_path.h	22;"	d
+reverse_offset	./include/project/zx_project_shortest_path.h	22;"	d
+right	./include/kernel/zx_ns_tree.h	/^   struct bst_node *right;$/;"	m	struct:bst_node	typeref:struct:bst_node::bst_node
+right_left_rotation	./src/kernel/zx_ns_tree.c	/^zx_bst_node* right_left_rotation(zx_bst_node *parent)$/;"	f
+right_right_rotation	./src/kernel/zx_ns_tree.c	/^zx_bst_node* right_right_rotation(zx_bst_node *parent)$/;"	f
+route	./include/project/backup/zx_track_sensing.h	/^      int route [TRACK_MAX];$/;"	m	struct:__anon29
+route	./include/project/zx_project_track_sensing.h	/^      int route [TRACK_MAX];$/;"	m	struct:__anon15
+route_node_index	./include/project/backup/zx_track_sensing.h	/^      int route_node_index;$/;"	m	struct:__anon29
+route_node_index	./include/project/zx_project_track_sensing.h	/^      int route_node_index;$/;"	m	struct:__anon15
+sender_task	./src/kernel/zx_testing.c	/^   void sender_task()$/;"	f
+source_id	./include/project/backup/zx_track_sensing.h	/^      int source_id;$/;"	m	struct:__anon34
+source_id	./include/project/zx_project_track_sensing.h	/^      int source_id;$/;"	m	struct:__anon20
+sp	./include/kernel/zx_tasks.h	/^         int *sp;           \/\/ stack pointer$/;"	m	struct:task_descriptor
+speed	./include/project/backup/zx_track_sensing.h	/^      int speed; \/\/ to know if we are accelerating or deccelerating$/;"	m	struct:__anon29
+speed	./include/project/zx_project_track_sensing.h	/^      int speed; \/\/ to know if we are accelerating or deccelerating$/;"	m	struct:__anon15
+speed	./src/project/backup before refactoring/zx_a0_main.c	/^   int speed;$/;"	m	struct:__anon2	file:
+speed_to_velocity	./include/project/backup/zx_track_sensing.h	/^      int speed_to_velocity[2][15];   \/\/ Speed starts from 0,1,2... ) 0 means stop                                      $/;"	m	struct:__anon29
+speed_to_velocity	./include/project/zx_project_track_sensing.h	/^      int speed_to_velocity[2][15];   \/\/ Speed starts from 0,1,2... ) 0 means stop                                      $/;"	m	struct:__anon15
+spsr	./include/kernel/zx_tasks.h	/^         int spsr;         \/\/ saved program status register$/;"	m	struct:task_descriptor
+src	./include/project/backup/zx_track_node.h	/^     track_node *src, *dest;$/;"	m	struct:track_edge
+src	./include/project/zx_project_track_node.h	/^     track_node *src, *dest;$/;"	m	struct:track_edge
+stack_base	./include/kernel/zx_tasks.h	/^         int *stack_base;   \/\/ stack base$/;"	m	struct:task_descriptor
+stack_limit	./include/kernel/zx_tasks.h	/^         int *stack_limit;  \/\/ stack limit$/;"	m	struct:task_descriptor
+state	./include/kernel/zx_tasks.h	/^         int state;        \/\/ state of the task$/;"	m	struct:task_descriptor
+state	./include/project/backup/zx_track_sensing.h	/^      int state;$/;"	m	struct:__anon28
+state	./include/project/backup/zx_track_sensing.h	/^      int state;$/;"	m	struct:__anon33
+state	./include/project/zx_project_track_sensing.h	/^      int state;$/;"	m	struct:__anon14
+state	./include/project/zx_project_track_sensing.h	/^      int state;$/;"	m	struct:__anon19
+stopping_distance	./include/project/backup/zx_track_sensing.h	/^      int stopping_distance[15]; \/\/ static list of stoping distances for this train. One distance for each speed. Speed starts from 0,1,2... ) , 0 means stop$/;"	m	struct:__anon29
+stopping_distance	./include/project/zx_project_track_sensing.h	/^      int stopping_distance[15]; \/\/ static list of stoping distances for this train. One distance for each speed. Speed starts from 0,1,2... ) , 0 means stop$/;"	m	struct:__anon15
+strcmp	./src/project/backup before refactoring/zx_a0_utilities.c	/^int strcmp( char *str1, char *str2 )$/;"	f
+strcmp	./src/project/zx_project_utilities.c	/^int strcmp( char *str1, char *str2 )$/;"	f
+swi_number	./include/kernel/zx_kernel_body.h	/^      int swi_number;$/;"	m	struct:__anon3
+t	./include/project/backup/zx_track_sensing.h	/^      int t;$/;"	m	struct:__anon29
+t	./include/project/zx_project_track_sensing.h	/^      int t;$/;"	m	struct:__anon15
+t0	./include/project/backup/zx_track_sensing.h	/^      int t0;$/;"	m	struct:__anon29
+t0	./include/project/zx_project_track_sensing.h	/^      int t0;$/;"	m	struct:__anon15
+t1	./include/project/backup/zx_track_sensing.h	/^      int t1;$/;"	m	struct:__anon29
+t1	./include/project/zx_project_track_sensing.h	/^      int t1;$/;"	m	struct:__anon15
+tail	./include/kernel/zx_queue.h	/^      int  tail;$/;"	m	struct:__anon5
+tail_pos	./include/project/backup/zx_track_sensing.h	/^      zx_train_pos tail_pos;$/;"	m	struct:__anon29
+tail_pos	./include/project/zx_project_track_sensing.h	/^      zx_train_pos tail_pos;$/;"	m	struct:__anon15
+target	./include/project/backup/zx_track_sensing.h	/^      zx_train_target target;$/;"	m	struct:__anon29
+target	./include/project/zx_project_track_sensing.h	/^      zx_train_target target;$/;"	m	struct:__anon15
+task_count	./src/kernel/zx_testing.c	524;"	d	file:
+task_descriptor	./include/kernel/zx_tasks.h	/^    typedef struct task_descriptor {$/;"	s
+test1	./src/kernel/zx_testing.c	/^void test1()$/;"	f
+test1_other_task	./src/kernel/zx_testing.c	/^   void test1_other_task()$/;"	f
+test2	./src/kernel/zx_testing.c	/^void test2()$/;"	f
+test2_other_task	./src/kernel/zx_testing.c	/^   void test2_other_task()$/;"	f
+test3	./src/kernel/zx_testing.c	/^void test3()$/;"	f
+test4	./src/kernel/zx_testing.c	/^void test4()$/;"	f
+test5	./src/kernel/zx_testing.c	/^void test5()$/;"	f
+test_ns	./src/kernel/zx_testing.c	/^void test_ns()$/;"	f
+ticks	./src/kernel/zx_testing.c	/^   int ticks;$/;"	m	struct:__anon1	file:
+tid	./include/kernel/zx_clockserver_heap.h	/^   int tid;$/;"	m	struct:heap_node
+tid	./include/kernel/zx_ns.h	/^   int tid;$/;"	m	struct:__anon4
+tid	./include/kernel/zx_ns_tree.h	/^   int tid;   $/;"	m	struct:bst_node
+tid	./include/kernel/zx_ready_queue.h	/^      int     tid;$/;"	m	struct:receive_queue_node
+tid	./include/kernel/zx_ready_queue.h	/^      int tid;$/;"	m	struct:ready_queue
+tid	./include/kernel/zx_tasks.h	/^         int tid;          \/\/ taskid$/;"	m	struct:task_descriptor
+time	./include/project/backup/zx_track_sensing.h	/^      int time; \/\/ nto sure$/;"	m	struct:__anon33
+time	./include/project/backup/zx_track_sensing.h	/^      int time; \/\/ time at which the train hit the node$/;"	m	struct:__anon24
+time	./include/project/backup/zx_track_sensing.h	/^      int time; \/\/ time at which the train hit the node$/;"	m	struct:__anon25
+time	./include/project/backup/zx_track_sensing.h	/^      int time;$/;"	m	struct:__anon31
+time	./include/project/zx_project_track_sensing.h	/^      int time; \/\/ nto sure$/;"	m	struct:__anon19
+time	./include/project/zx_project_track_sensing.h	/^      int time; \/\/ time at which the train hit the node$/;"	m	struct:__anon10
+time	./include/project/zx_project_track_sensing.h	/^      int time; \/\/ time at which the train hit the node$/;"	m	struct:__anon11
+time	./include/project/zx_project_track_sensing.h	/^      int time;$/;"	m	struct:__anon17
+track_calc_distance	./src/project/backup before refactoring/zx_calibration.c	/^int track_calc_distance(track_node* start_node, track_node* end_node, zx_turnout_state turnout_states[])$/;"	f
+track_calc_distance	./src/project/zx_project_calibration.c	/^int track_calc_distance(track_node* start_node, track_node* end_node, zx_turnout_state turnout_states[])$/;"	f
+track_calc_shortest_path	./src/project/zx_project_shortest_path.c	/^int track_calc_shortest_path(track_node* track, int source_index, int destination_index, zx_turnout_state turnout_states[], char* result_path, int* result_path_length, zx_waypoint waypoints[])$/;"	f
+track_edge	./include/project/backup/zx_track_node.h	/^   struct track_edge {$/;"	s
+track_edge	./include/project/backup/zx_track_node.h	/^   typedef struct track_edge track_edge;$/;"	t	typeref:struct:track_edge
+track_edge	./include/project/zx_project_track_node.h	/^   struct track_edge {$/;"	s
+track_edge	./include/project/zx_project_track_node.h	/^   typedef struct track_edge track_edge;$/;"	t	typeref:struct:track_edge
+track_init	./include/project/backup/zx_track_functions.c	/^void track_init(char track_id, track_node* track)$/;"	f
+track_init	./include/project/zx_project_track_functions.c	/^void track_init(char track_id, track_node* track)$/;"	f
+track_init	./src/project/zx_project_track_functions.c	/^void track_init(char track_id, track_node* track)$/;"	f
+track_node	./include/project/backup/zx_track_node.h	/^   struct track_node {$/;"	s
+track_node	./include/project/backup/zx_track_node.h	/^   typedef struct track_node track_node;$/;"	t	typeref:struct:track_node
+track_node	./include/project/zx_project_track_node.h	/^   struct track_node {$/;"	s
+track_node	./include/project/zx_project_track_node.h	/^   typedef struct track_node track_node;$/;"	t	typeref:struct:track_node
+track_ptr	./include/project/backup/zx_track_sensing.h	/^      track_node* track_ptr;$/;"	m	struct:__anon34
+track_ptr	./include/project/zx_project_track_sensing.h	/^      track_node* track_ptr;$/;"	m	struct:__anon20
+train	./include/project/backup/zx_track_sensing.h	/^      zx_train *train;$/;"	m	struct:__anon30
+train	./include/project/backup/zx_track_sensing.h	/^      zx_train* train;$/;"	m	struct:__anon34
+train	./include/project/zx_project_track_sensing.h	/^      zx_train *train;$/;"	m	struct:__anon16
+train	./include/project/zx_project_track_sensing.h	/^      zx_train* train;$/;"	m	struct:__anon20
+train_calc_accelerating_delay	./src/project/backup before refactoring/zx_calibration.c	/^int train_calc_accelerating_delay(zx_train* train)$/;"	f
+train_calc_accelerating_delay	./src/project/zx_project_calibration.c	/^int train_calc_accelerating_delay(zx_train* train)$/;"	f
+train_calc_deccelerating_delay	./src/project/backup before refactoring/zx_calibration.c	/^int train_calc_deccelerating_delay(zx_train* train)$/;"	f
+train_calc_deccelerating_delay	./src/project/zx_project_calibration.c	/^int train_calc_deccelerating_delay(zx_train* train)$/;"	f
+train_commit	./src/project/zx_project_train_functions.c	/^void train_commit(zx_train* train)$/;"	f
+train_commit_reverse	./src/project/zx_project_train_functions.c	/^void train_commit_reverse(zx_train* train)$/;"	f
+train_find_velocity_and_distance_in_delta	./src/project/backup before refactoring/zx_calibration.c	/^void train_find_velocity_and_distance_in_delta( zx_train* train )$/;"	f
+train_find_velocity_and_distance_in_delta	./src/project/zx_project_calibration.c	/^void train_find_velocity_and_distance_in_delta( zx_train* train )$/;"	f
+train_get_run_speed_from_distance	./src/project/zx_project_train_functions.c	/^int train_get_run_speed_from_distance(zx_train* train, int distance)$/;"	f
+train_get_stopping_delay	./src/project/backup before refactoring/zx_calibration.c	/^int train_get_stopping_delay(zx_train* train, int speed) \/\/ returns time in ticks$/;"	f
+train_get_stopping_delay	./src/project/zx_project_calibration.c	/^int train_get_stopping_delay(zx_train* train, int speed) \/\/ returns time in ticks$/;"	f
+train_id	./include/project/backup/zx_track_sensing.h	/^      int train_id; \/\/ donezx_train_stop_request$/;"	m	struct:__anon29
+train_id	./include/project/zx_project_track_sensing.h	/^      int train_id; \/\/ donezx_train_stop_request$/;"	m	struct:__anon15
+train_init	./src/project/zx_project_train_functions.c	/^void train_init(zx_train* train, int train_id)$/;"	f
+train_put_at_sensor	./src/project/zx_project_train_functions.c	/^void train_put_at_sensor(zx_train* train, track_node* sensor_node, int time)$/;"	f
+train_set_speed	./src/project/zx_project_train_functions.c	/^void train_set_speed(zx_train* train, int new_speed)$/;"	f
+train_stop_task	./src/project/zx_project_train_functions.c	/^void train_stop_task(void )$/;"	f
+train_update_expected_sensors	./src/project/zx_project_train_functions.c	/^void train_update_expected_sensors(zx_train* train)$/;"	f
+train_update_expected_sensors_rec	./src/project/zx_project_train_functions.c	/^void train_update_expected_sensors_rec(zx_train* train, track_node* start, int depth, int start_distance) \/\/ distance is in DISTANCE_UNIT!!!$/;"	f
+train_update_velocity_and_offset	./src/project/zx_project_train_functions.c	/^void train_update_velocity_and_offset(zx_train* train)$/;"	f
+truly_idle_	./src/kernel/zx_kernel_body.c	/^void truly_idle_()$/;"	f
+turnout_commit	./include/project/backup/zx_track_functions.c	/^void turnout_commit(zx_turnout_state* turnout)$/;"	f
+turnout_commit	./include/project/zx_project_track_functions.c	/^void turnout_commit(zx_turnout_state* turnout)$/;"	f
+turnout_commit	./src/project/zx_project_track_functions.c	/^void turnout_commit(zx_turnout_state* turnout)$/;"	f
+turnout_init	./include/project/backup/zx_track_functions.c	/^void turnout_init(zx_turnout_state turnout_states[], char cstate) \/\/ 's' or 'c'$/;"	f
+turnout_init	./include/project/zx_project_track_functions.c	/^void turnout_init(zx_turnout_state turnout_states[], char cstate) \/\/ 's' or 'c'$/;"	f
+turnout_init	./src/project/zx_project_track_functions.c	/^void turnout_init(zx_turnout_state turnout_states[], char cstate) \/\/ 's' or 'c'$/;"	f
+turnout_states	./include/project/backup/zx_track_sensing.h	/^      zx_turnout_state* turnout_states;$/;"	m	struct:__anon34
+turnout_states	./include/project/zx_project_track_sensing.h	/^      zx_turnout_state* turnout_states;$/;"	m	struct:__anon20
+turnout_toggle	./include/project/backup/zx_track_functions.c	/^void turnout_toggle(zx_turnout_state turnout_states[], int id, char cstate)$/;"	f
+turnout_toggle	./include/project/zx_project_track_functions.c	/^void turnout_toggle(zx_turnout_state turnout_states[], int id, char cstate)$/;"	f
+turnout_toggle	./src/project/zx_project_track_functions.c	/^void turnout_toggle(zx_turnout_state turnout_states[], int id, char cstate)$/;"	f
+type	./include/kernel/zx_ns.h	/^   int type;$/;"	m	struct:__anon4
+type	./include/kernel/zx_tasks.h	/^          int  type;$/;"	m	struct:__anon7
+type	./include/kernel/zx_tasks.h	/^          int  type;$/;"	m	struct:__anon8
+type	./include/kernel/zx_tasks.h	/^          int type;$/;"	m	struct:__anon6
+type	./include/project/backup/zx_track_node.h	/^     node_type type;$/;"	m	struct:track_node
+type	./include/project/backup/zx_track_sensing.h	/^      int type;$/;"	m	struct:__anon34
+type	./include/project/backup/zx_track_sensing.h	/^      int type;$/;"	m	struct:__anon35
+type	./include/project/zx_project_track_node.h	/^     node_type type;$/;"	m	struct:track_node
+type	./include/project/zx_project_track_sensing.h	/^      int type;$/;"	m	struct:__anon20
+type	./include/project/zx_project_track_sensing.h	/^      int type;$/;"	m	struct:__anon21
+update_switch_entry	./src/project/backup before refactoring/zx_train_a0.c	/^int update_switch_entry( int switch_number, char switch_state, char *buffer, int *pos, int len )$/;"	f
+va_arg	./include/kernel/zx_uart_io.h	40;"	d
+va_end	./include/kernel/zx_uart_io.h	38;"	d
+va_list	./include/kernel/zx_uart_io.h	/^typedef char *va_list;$/;"	t
+va_start	./include/kernel/zx_uart_io.h	36;"	d
+value	./include/kernel/zx_tasks.h	/^          char value;$/;"	m	struct:__anon8
+value	./include/kernel/zx_tasks.h	/^          int value;$/;"	m	struct:__anon6
+value	./include/kernel/zx_tasks.h	/^          int value;$/;"	m	struct:__anon7
+value	./include/project/backup/zx_track_sensing.h	/^      int value;$/;"	m	struct:__anon31
+value	./include/project/backup/zx_track_sensing.h	/^      int value;$/;"	m	struct:__anon32
+value	./include/project/zx_project_track_sensing.h	/^      int value;$/;"	m	struct:__anon17
+value	./include/project/zx_project_track_sensing.h	/^      int value;$/;"	m	struct:__anon18
+velocity_state	./include/project/backup/zx_track_sensing.h	/^      int velocity_state; \/\/ acclerating, deccelerating, immobile$/;"	m	struct:__anon29
+velocity_state	./include/project/zx_project_track_sensing.h	/^      int velocity_state; \/\/ acclerating, deccelerating, immobile$/;"	m	struct:__anon15
+visible	./include/project/backup/zx_track_sensing.h	/^      int visible;    $/;"	m	struct:__anon26
+visible	./include/project/zx_project_track_sensing.h	/^      int visible;    $/;"	m	struct:__anon12
+wait_until_sensor_triggered	./src/project/backup before refactoring/zx_milestone_1.c	/^void wait_until_sensor_triggered(char unit, int number)$/;"	f
+wake_up_time	./include/kernel/zx_clockserver_heap.h	/^   int wake_up_time;$/;"	m	struct:heap_node
+waypoint_index	./include/project/backup/zx_track_sensing.h	/^      int waypoint_index;$/;"	m	struct:__anon29
+waypoint_index	./include/project/zx_project_track_sensing.h	/^      int waypoint_index;$/;"	m	struct:__anon15
+waypoints	./include/project/backup/zx_track_sensing.h	/^      zx_waypoint waypoints[WAYPOINT_COUNT];$/;"	m	struct:__anon29
+waypoints	./include/project/zx_project_track_sensing.h	/^      zx_waypoint waypoints[WAYPOINT_COUNT];$/;"	m	struct:__anon15
+zx_a0_command_task	./src/project/backup before refactoring/zx_a0_main.c	/^void zx_a0_command_task()$/;"	f
+zx_a0_init_screen	./src/project/backup before refactoring/zx_a0_main.c	/^void zx_a0_init_screen()$/;"	f
+zx_a0_initialize_switches	./src/project/backup before refactoring/zx_a0_main.c	/^void zx_a0_initialize_switches( char switch_state[])$/;"	f
+zx_a0_milestone_1_task_speed	./src/project/backup before refactoring/zx_milestone_1.c	/^void zx_a0_milestone_1_task_speed()$/;"	f
+zx_a0_milestone_1_task_stopping_distance	./src/project/backup before refactoring/zx_milestone_1.c	/^void zx_a0_milestone_1_task_stopping_distance()$/;"	f
+zx_a0_milestone_1_task_stopping_time	./src/project/backup before refactoring/zx_milestone_1.c	/^void zx_a0_milestone_1_task_stopping_time()$/;"	f
+zx_a0_print_error_message	./src/project/backup before refactoring/zx_a0_main.c	/^void zx_a0_print_error_message( char *message )$/;"	f
+zx_a0_print_error_message	./src/project/zx_project_utilities.c	/^void zx_a0_print_error_message( char *message )$/;"	f
+zx_a0_print_sensor_table_header	./src/project/backup before refactoring/zx_a0_main.c	/^void zx_a0_print_sensor_table_header( int x, int y, char* output, int* output_size  )$/;"	f
+zx_a0_print_switch_table_header	./src/project/backup before refactoring/zx_a0_main.c	/^int zx_a0_print_switch_table_header( int x, int y, char* output, int* output_size )$/;"	f
+zx_a0_reverse_task	./src/project/backup before refactoring/zx_a0_main.c	/^void zx_a0_reverse_task()$/;"	f
+zx_a0_sensor_task	./src/project/backup before refactoring/zx_a0_main.c	/^void zx_a0_sensor_task()$/;"	f
+zx_a0_timer_task	./src/project/backup before refactoring/zx_a0_main.c	/^void zx_a0_timer_task()$/;"	f
+zx_a0_train	./src/project/backup before refactoring/zx_a0_main.c	/^} zx_a0_train;$/;"	t	typeref:struct:__anon2	file:
+zx_a0_turn_off_solenoid	./src/project/backup before refactoring/zx_a0_main.c	/^void zx_a0_turn_off_solenoid()$/;"	f
+zx_a0_update_switch_entry	./src/project/backup before refactoring/zx_a0_main.c	/^int zx_a0_update_switch_entry( int switch_number, char switch_state )$/;"	f
+zx_a2d	./src/kernel/zx_uart_io.c	/^int zx_a2d( char ch ) {$/;"	f
+zx_a2i	./src/kernel/zx_uart_io.c	/^char zx_a2i( char ch, char **src, int base, int *nump ) {$/;"	f
+zx_alloc	./src/kernel/zx_memory.c	/^void* zx_alloc() $/;"	f
+zx_await_event	./src/kernel/zx_system_call_handlers.c	/^void zx_await_event(int event_number)$/;"	f
+zx_bst_add_by_name	./src/kernel/zx_ns_tree.c	/^int zx_bst_add_by_name( zx_bst_node** root, char *name, int tid)$/;"	f
+zx_bst_balancing	./src/kernel/zx_ns_tree.c	/^zx_bst_node* zx_bst_balancing(zx_bst_node *node)$/;"	f
+zx_bst_find_height	./src/kernel/zx_ns_tree.c	/^int zx_bst_find_height(zx_bst_node* node)$/;"	f
+zx_bst_get_by_name	./src/kernel/zx_ns_tree.c	/^int zx_bst_get_by_name( char *name, zx_bst_node *root)$/;"	f
+zx_bst_get_diff	./src/kernel/zx_ns_tree.c	/^int zx_bst_get_diff(zx_bst_node* node)$/;"	f
+zx_bst_node	./include/kernel/zx_ns_tree.h	/^}zx_bst_node;$/;"	t	typeref:struct:bst_node
+zx_c2x	./src/kernel/zx_uart_io.c	/^char zx_c2x( char ch ) {$/;"	f
+zx_circular_queue	./include/kernel/zx_queue.h	/^  }zx_circular_queue;$/;"	t	typeref:struct:__anon5
+zx_clear_screen	./src/project/backup before refactoring/zx_a0_graphics.c	/^int zx_clear_screen( char *output, int* output_size_addr )$/;"	f
+zx_clear_screen	./src/project/zx_project_graphics.c	/^int zx_clear_screen( char *output, int* output_size_addr )$/;"	f
+zx_clock_client	./src/kernel/zx_testing.c	/^void zx_clock_client()$/;"	f
+zx_clock_notifier	./src/kernel/zx_clock_server.c	/^void zx_clock_notifier()$/;"	f
+zx_clock_server	./src/kernel/zx_clock_server.c	/^void zx_clock_server()$/;"	f
+zx_clockserver_heap_init	./src/kernel/zx_clockserver_heap.c	/^ void zx_clockserver_heap_init( zx_clockserver_heap_node *heap, int heap_size, int *end_node_index )$/;"	f
+zx_clockserver_heap_insert	./src/kernel/zx_clockserver_heap.c	/^ void zx_clockserver_heap_insert( zx_clockserver_heap_node *heap, int *next_node_index, int tid, int wake_up_time )$/;"	f
+zx_clockserver_heap_node	./include/kernel/zx_clockserver_heap.h	/^  }zx_clockserver_heap_node;$/;"	t	typeref:struct:heap_node
+zx_clockserver_heap_node_swap	./src/kernel/zx_clockserver_heap.c	/^ void  zx_clockserver_heap_node_swap( zx_clockserver_heap_node *parent_node, zx_clockserver_heap_node *child_node)$/;"	f
+zx_clockserver_heap_remove	./src/kernel/zx_clockserver_heap.c	/^ void zx_clockserver_heap_remove( zx_clockserver_heap_node *heap, int *end_node_index)$/;"	f
+zx_clockserver_min_heapify_after_delete	./src/kernel/zx_clockserver_heap.c	/^ void zx_clockserver_min_heapify_after_delete( zx_clockserver_heap_node *heap, int index )$/;"	f
+zx_clockserver_min_heapify_after_insert	./src/kernel/zx_clockserver_heap.c	/^ void zx_clockserver_min_heapify_after_insert( zx_clockserver_heap_node *heap, int index )$/;"	f
+zx_command_task	./src/project/zx_project_ui.c	/^void zx_command_task()$/;"	f
+zx_command_task_request	./include/project/backup/zx_ui.h	/^  } zx_command_task_request;$/;"	t	typeref:struct:__anon36
+zx_command_task_request	./include/project/zx_project_ui.h	/^  } zx_command_task_request;$/;"	t	typeref:struct:__anon22
+zx_count_trailing_zeros	./src/kernel/zx_helper.c	/^int zx_count_trailing_zeros(int x)$/;"	f
+zx_count_trailing_zeros_64	./src/kernel/zx_helper.c	/^int zx_count_trailing_zeros_64(unsigned long long x)$/;"	f
+zx_create	./src/kernel/zx_system_call_handlers.c	/^int zx_create( int priority, void (*zx_task)() )$/;"	f
+zx_device_init	./src/kernel/zx_irq_device.c	/^void zx_device_init( int device_number)$/;"	f
+zx_device_intr_clear	./src/kernel/zx_irq_device.c	/^void zx_device_intr_clear( int device_number)$/;"	f
+zx_device_intr_clear_all	./src/kernel/zx_irq_device.c	/^void zx_device_intr_clear_all()$/;"	f
+zx_device_intr_disable_all	./src/kernel/zx_irq_device.c	/^void zx_device_intr_disable_all()$/;"	f
+zx_device_intr_off	./src/kernel/zx_irq_device.c	/^void zx_device_intr_off( int device_number )$/;"	f
+zx_device_intr_on	./src/kernel/zx_irq_device.c	/^ void zx_device_intr_on( int device_number )$/;"	f
+zx_does_task_exist	./src/kernel/zx_helper.c	/^int zx_does_task_exist(int tid)$/;"	f
+zx_draw_h_line	./src/project/backup before refactoring/zx_a0_graphics.c	/^int zx_draw_h_line( int row ,int start , int end, char pattern, char *output, int* output_size_addr )$/;"	f
+zx_draw_h_line	./src/project/zx_project_graphics.c	/^int zx_draw_h_line( int row ,int start , int end, char pattern, char *output, int* output_size_addr )$/;"	f
+zx_empty_heap_and_notify_client_tasks	./src/kernel/zx_clock_server.c	/^void zx_empty_heap_and_notify_client_tasks(zx_clockserver_heap_node clock_server_heap[], int *end_node_index)$/;"	f
+zx_erase_from_current_to_scrend	./src/project/backup before refactoring/zx_a0_graphics.c	/^int zx_erase_from_current_to_scrend(char *output, int* output_size_addr)$/;"	f
+zx_erase_from_current_to_scrend	./src/project/zx_project_graphics.c	/^int zx_erase_from_current_to_scrend(char *output, int* output_size_addr)$/;"	f
+zx_erase_line	./src/project/backup before refactoring/zx_a0_graphics.c	/^int zx_erase_line(char *output, int* output_size_addr)$/;"	f
+zx_erase_line	./src/project/zx_project_graphics.c	/^int zx_erase_line(char *output, int* output_size_addr)$/;"	f
+zx_exit	./src/kernel/zx_system_call_handlers.c	/^void zx_exit()$/;"	f
+zx_first_user_task_kernel_3	./src/kernel/zx_testing.c	/^void zx_first_user_task_kernel_3()$/;"	f
+zx_first_user_task_kernel_4	./src/kernel/zx_testing.c	/^void zx_first_user_task_kernel_4()$/;"	f
+zx_first_user_task_kernel_4_a0	./src/kernel/zx_testing.c	/^void zx_first_user_task_kernel_4_a0()$/;"	f
+zx_first_user_task_kernel_4_new	./src/kernel/zx_testing.c	/^void zx_first_user_task_kernel_4_new()$/;"	f
+zx_first_user_task_queue_test	./src/kernel/zx_testing.c	/^void zx_first_user_task_queue_test()$/;"	f
+zx_format	./src/kernel/zx_uart_io.c	/^void zx_format ( int channel, char *fmt, va_list va ) {$/;"	f
+zx_free	./src/kernel/zx_memory.c	/^void zx_free( void *memory) $/;"	f
+zx_get_active_task_id	./src/kernel/zx_helper.c	/^int zx_get_active_task_id()$/;"	f
+zx_get_active_td	./src/kernel/zx_helper.c	/^ zx_td* zx_get_active_td()$/;"	f
+zx_get_closure_errors	./src/kernel/zx_kernel_body.c	/^zx_request* zx_get_closure_errors()$/;"	f
+zx_get_hash_value	./src/kernel/zx_ns_tree.c	/^int zx_get_hash_value( char *name ){$/;"	f
+zx_get_interrupt_source	./src/kernel/zx_irq_vic.c	/^int zx_get_interrupt_source()$/;"	f
+zx_get_next_request	./src/kernel/zx_kernel_body.c	/^zx_request* zx_get_next_request()$/;"	f
+zx_get_task_id_by_name	./src/kernel/zx_ns_tree.c	/^int zx_get_task_id_by_name( int hash_value, zx_bst_node *root )$/;"	f
+zx_get_td	./src/kernel/zx_helper.c	/^zx_td* zx_get_td(int tid)$/;"	f
+zx_get_waypoints	./src/project/zx_project_shortest_path.c	/^void zx_get_waypoints(  zx_waypoint waypoints[], int path_stack[], int path_distance[], track_node track[], int path_stack_top)$/;"	f
+zx_handle	./src/kernel/zx_kernel_body.c	/^void zx_handle( void *req )$/;"	f
+zx_handle_hwi	./src/kernel/zx_system_call_handlers.c	/^void zx_handle_hwi(int device_number)$/;"	f
+zx_handle_timer_interrupt	./src/kernel/zx_irq_device.c	/^void zx_handle_timer_interrupt(int make_default)$/;"	f
+zx_handle_uart1_transmit_interrupt	./src/kernel/zx_irq_device.c	/^void zx_handle_uart1_transmit_interrupt(int source, int make_default)$/;"	f
+zx_handle_uart_interrupt	./src/kernel/zx_irq_device.c	/^void zx_handle_uart_interrupt(int source, int make_default)$/;"	f
+zx_heap_chunk	./include/kernel/zx_memory.h	/^  }zx_heap_chunk;$/;"	t	typeref:struct:heap_chunk
+zx_heap_create	./src/kernel/zx_memory.c	/^void zx_heap_create( int *tdptr) $/;"	f
+zx_i2a	./src/kernel/zx_uart_io.c	/^void zx_i2a( int num, char *bf ) {$/;"	f
+zx_idle	./src/kernel/zx_kernel_body.c	/^void zx_idle()$/;"	f
+zx_init_modem_intr	./src/kernel/zx_irq_device.c	/^void zx_init_modem_intr()$/;"	f
+zx_initialize_prompt	./src/project/backup before refactoring/zx_a0_graphics.c	/^void zx_initialize_prompt( char *prompt)$/;"	f
+zx_initialize_prompt	./src/project/zx_project_graphics.c	/^void zx_initialize_prompt( char *prompt)$/;"	f
+zx_initialize_stack	./src/kernel/zx_system_call_handlers.c	/^int zx_initialize_stack( int* base, void *zx_task )$/;"	f
+zx_initialize_uart1	./src/kernel/zx_uart_io.c	/^int zx_initialize_uart1()$/;"	f
+zx_initialize_uart2	./src/kernel/zx_uart_io.c	/^int zx_initialize_uart2()$/;"	f
+zx_insert_into_bst	./src/kernel/zx_ns_tree.c	/^zx_bst_node* zx_insert_into_bst( zx_bst_node *root,int hash_value, int tid)$/;"	f
+zx_is_queue_empty	./src/kernel/zx_queue.c	/^  int zx_is_queue_empty( int head, int tail)$/;"	f
+zx_is_taskid_valid	./src/kernel/zx_helper.c	/^int zx_is_taskid_valid(int tid)$/;"	f
+zx_kernel_init	./src/kernel/zx_kernel_body.c	/^void zx_kernel_init(int arg) {$/;"	f
+zx_kill	./src/kernel/zx_system_call_handlers.c	/^void zx_kill( int tid )$/;"	f
+zx_memcpy	./src/kernel/zx_memory.c	/^ void* zx_memcpy( void* dest, void* src, int bytes) \/\/ override for system function of memcpy$/;"	f
+zx_memset	./src/kernel/zx_memory.c	/^void* zx_memset(void *s, int c, unsigned int n) $/;"	f
+zx_my_tid	./src/kernel/zx_system_call_handlers.c	/^int zx_my_tid()$/;"	f
+zx_name_server	./src/kernel/zx_ns.c	/^void zx_name_server()$/;"	f
+zx_node_info	./include/project/backup/zx_track_sensing.h	/^   } zx_node_info;$/;"	t	typeref:struct:__anon24
+zx_node_info	./include/project/zx_project_track_sensing.h	/^   } zx_node_info;$/;"	t	typeref:struct:__anon10
+zx_ns_request	./include/kernel/zx_ns.h	/^} zx_ns_request;$/;"	t	typeref:struct:__anon4
+zx_parent_tid	./src/kernel/zx_system_call_handlers.c	/^int zx_parent_tid()$/;"	f
+zx_prepare_track	./src/project/zx_project_shortest_path.c	/^void zx_prepare_track(  zx_turnout_state turnout_states[], int path_stack[], track_node track[], int path_stack_top)$/;"	f
+zx_print_number	./src/kernel/zx_uart_io.c	/^void zx_print_number( int channel, int num )$/;"	f
+zx_printf	./src/kernel/zx_uart_io.c	/^void zx_printf( int channel, char *fmt, ... ) {$/;"	f
+zx_put_number	./src/project/backup before refactoring/zx_a0_graphics.c	/^void zx_put_number( int num, char *output, int* output_size_addr )$/;"	f
+zx_put_number	./src/project/zx_project_graphics.c	/^void zx_put_number( int num, char *output, int* output_size_addr )$/;"	f
+zx_put_string	./src/project/backup before refactoring/zx_a0_graphics.c	/^int zx_put_string(char *str, char *output, int* output_size_addr ) $/;"	f
+zx_put_string	./src/project/zx_project_graphics.c	/^int zx_put_string(char *str, char *output, int* output_size_addr ) $/;"	f
+zx_putc	./src/kernel/zx_uart_io.c	/^int zx_putc( int channel, char c )$/;"	f
+zx_putr	./src/kernel/zx_uart_io.c	/^int zx_putr( int channel, unsigned int reg ) {$/;"	f
+zx_putstr	./src/kernel/zx_uart_io.c	/^int zx_putstr( int channel, char *str ) {$/;"	f
+zx_putw	./src/kernel/zx_uart_io.c	/^void zx_putw( int channel, int n, char fc, char *bf ) {$/;"	f
+zx_putx	./src/kernel/zx_uart_io.c	/^int zx_putx( int channel, char c ) {$/;"	f
+zx_q_add_priority	./src/kernel/zx_ready_queue.c	/^void zx_q_add_priority( int new_priority)$/;"	f
+zx_q_append_to_end	./src/kernel/zx_ready_queue.c	/^void zx_q_append_to_end(  int tid, int priority )$/;"	f
+zx_q_append_to_penultimate	./src/kernel/zx_ready_queue.c	/^void zx_q_append_to_penultimate(  int tid, int priority )$/;"	f
+zx_q_create_node	./src/kernel/zx_ready_queue.c	/^zx_ready_queue_node* zx_q_create_node( int tid)$/;"	f
+zx_q_free_node	./src/kernel/zx_ready_queue.c	/^void zx_q_free_node( zx_ready_queue_node *node )$/;"	f
+zx_q_get_head_addr	./src/kernel/zx_ready_queue.c	/^int* zx_q_get_head_addr( int priority )$/;"	f
+zx_q_get_highest_priority	./src/kernel/zx_ready_queue.c	/^int zx_q_get_highest_priority()$/;"	f
+zx_q_get_next_tid	./src/kernel/zx_ready_queue.c	/^int  zx_q_get_next_tid()$/;"	f
+zx_q_get_node	./src/kernel/zx_ready_queue.c	/^zx_ready_queue_node* zx_q_get_node( int tid )$/;"	f
+zx_q_remove_node	./src/kernel/zx_ready_queue.c	/^void zx_q_remove_node( int tid, int priority )$/;"	f
+zx_q_remove_priority	./src/kernel/zx_ready_queue.c	/^void zx_q_remove_priority( int priority)$/;"	f
+zx_queue_initialize	./src/kernel/zx_queue.c	/^  int zx_queue_initialize( zx_circular_queue **q, void *queue, int data_size, int queue_size )$/;"	f
+zx_queue_insert	./src/kernel/zx_queue.c	/^  int zx_queue_insert( zx_circular_queue **q, void *data)$/;"	f
+zx_queue_is_full	./src/kernel/zx_queue.c	/^  int zx_queue_is_full( int head, int tail, int queue_size)$/;"	f
+zx_queue_remove	./src/kernel/zx_queue.c	/^  int zx_queue_remove( zx_circular_queue **q, void *data)$/;"	f
+zx_random	./src/kernel/zx_helper.c	/^unsigned int zx_random(unsigned int previous)$/;"	f
+zx_random_range	./src/kernel/zx_helper.c	/^unsigned int zx_random_range(unsigned int previous, unsigned int limit, unsigned int* new_random)$/;"	f
+zx_read_byte	./src/kernel/zx_uart_io.c	/^char zx_read_byte( int channel )$/;"	f
+zx_ready_queue_node	./include/kernel/zx_ready_queue.h	/^   }zx_ready_queue_node;$/;"	t	typeref:struct:ready_queue
+zx_receive	./src/kernel/zx_system_call_handlers.c	/^void  zx_receive( int *sendertid, void *message, int msglen)$/;"	f
+zx_receive_q_append_to_end	./src/kernel/zx_receive_queue.c	/^void zx_receive_q_append_to_end(  int tid, zx_receive_queue_node* new_node )$/;"	f
+zx_receive_q_create_node	./src/kernel/zx_receive_queue.c	/^zx_receive_queue_node* zx_receive_q_create_node( int tid, void *msg, int msglen)$/;"	f
+zx_receive_q_free_head	./src/kernel/zx_receive_queue.c	/^void zx_receive_q_free_head( zx_receive_queue_node *node )$/;"	f
+zx_receive_q_get_head_addr	./src/kernel/zx_receive_queue.c	/^int* zx_receive_q_get_head_addr( int array_index )$/;"	f
+zx_receive_q_get_next_node	./src/kernel/zx_receive_queue.c	/^zx_receive_queue_node*  zx_receive_q_get_next_node(int tid)$/;"	f
+zx_receive_q_get_node	./src/kernel/zx_receive_queue.c	/^zx_receive_queue_node* zx_receive_q_get_node( int array_index)$/;"	f
+zx_receive_q_get_tail_addr	./src/kernel/zx_receive_queue.c	/^int* zx_receive_q_get_tail_addr( int array_index )$/;"	f
+zx_receive_queue_node	./include/kernel/zx_ready_queue.h	/^   }zx_receive_queue_node;$/;"	t	typeref:struct:receive_queue_node
+zx_reply	./src/kernel/zx_system_call_handlers.c	/^void  zx_reply( int sendertid, void *reply, int reply_len)$/;"	f
+zx_request	./include/kernel/zx_kernel_body.h	/^   } zx_request;$/;"	t	typeref:struct:__anon3
+zx_reset_all_interrupts	./src/kernel/zx_irq_vic.c	/^void zx_reset_all_interrupts()$/;"	f
+zx_restore_context	./src/kernel/zx_kernel_body.c	/^zx_request* zx_restore_context(int tid)$/;"	f
+zx_route_request	./include/project/backup/zx_track_sensing.h	/^   } zx_route_request;$/;"	t	typeref:struct:__anon34
+zx_route_request	./include/project/zx_project_track_sensing.h	/^   } zx_route_request;$/;"	t	typeref:struct:__anon20
+zx_route_response	./include/project/backup/zx_track_sensing.h	/^   } zx_route_response;$/;"	t	typeref:struct:__anon35
+zx_route_response	./include/project/zx_project_track_sensing.h	/^   } zx_route_response;$/;"	t	typeref:struct:__anon21
+zx_route_task	./src/project/zx_project_track_sensing.c	/^void zx_route_task()$/;"	f
+zx_save_context_and_return_to_kernel	./src/kernel/zx_kernel_body.c	/^zx_request* zx_save_context_and_return_to_kernel()$/;"	f
+zx_send	./src/kernel/zx_system_call_handlers.c	/^void  zx_send( int recv_tid, void *message, int msglen, void *reply, int replylen )$/;"	f
+zx_sensor_courier_task	./src/project/zx_project_sensor.c	/^void zx_sensor_courier_task()$/;"	f
+zx_sensor_request	./include/project/backup/zx_track_sensing.h	/^   } zx_sensor_request;$/;"	t	typeref:struct:__anon31
+zx_sensor_request	./include/project/zx_project_track_sensing.h	/^   } zx_sensor_request;$/;"	t	typeref:struct:__anon17
+zx_sensor_secretary_task	./src/project/zx_project_sensor.c	/^void zx_sensor_secretary_task()$/;"	f
+zx_set_active_task_id	./src/kernel/zx_helper.c	/^void zx_set_active_task_id(int tid)$/;"	f
+zx_set_bit_64	./src/kernel/zx_helper.c	/^unsigned long long zx_set_bit_64(unsigned long long x, int index, int value)$/;"	f
+zx_set_cursor	./src/project/backup before refactoring/zx_a0_graphics.c	/^int zx_set_cursor( int row, int column, char *output, int* output_size_addr )$/;"	f
+zx_set_cursor	./src/project/zx_project_graphics.c	/^int zx_set_cursor( int row, int column, char *output, int* output_size_addr )$/;"	f
+zx_setfifo	./src/kernel/zx_uart_io.c	/^int zx_setfifo( int channel, int state ) {$/;"	f
+zx_shortest_path	./src/project/zx_project_shortest_path.c	/^int zx_shortest_path( int source_index, int target_index, int path_stack[], int distance[], int *path_stack_top, track_node track[])$/;"	f
+zx_shortest_path_test	./src/project/zx_project_shortest_path.c	/^void zx_shortest_path_test()$/;"	f
+zx_shutdown	./src/kernel/zx_system_call_handlers.c	/^void zx_shutdown()$/;"	f
+zx_td	./include/kernel/zx_tasks.h	/^    } zx_td;$/;"	t	typeref:struct:task_descriptor
+zx_time_request	./include/kernel/zx_tasks.h	/^       } zx_time_request;$/;"	t	typeref:struct:__anon6
+zx_timer_disable	./src/kernel/zx_timer.c	/^ void zx_timer_disable( int timer )$/;"	f
+zx_timer_enable	./src/kernel/zx_timer.c	/^ void zx_timer_enable( int timer )$/;"	f
+zx_timer_get_value	./src/kernel/zx_timer.c	/^ int zx_timer_get_value( int timer )$/;"	f
+zx_timer_load_val	./src/kernel/zx_timer.c	/^ void zx_timer_load_val( int timer, int val )$/;"	f
+zx_timer_select_clock	./src/kernel/zx_timer.c	/^ void zx_timer_select_clock( int timer, int clock_mask )$/;"	f
+zx_timer_set_periodic	./src/kernel/zx_timer.c	/^ void zx_timer_set_periodic( int timer, int periodic )$/;"	f
+zx_track_sensor_task	./src/project/zx_project_sensor.c	/^void zx_track_sensor_task()$/;"	f
+zx_train	./include/project/backup/zx_track_sensing.h	/^   } zx_train;$/;"	t	typeref:struct:__anon29
+zx_train	./include/project/zx_project_track_sensing.h	/^   } zx_train;$/;"	t	typeref:struct:__anon15
+zx_train_controller_task	./src/project/zx_project_track_sensing.c	/^void zx_train_controller_task()$/;"	f
+zx_train_pos	./include/project/backup/zx_track_sensing.h	/^   } zx_train_pos;$/;"	t	typeref:struct:__anon25
+zx_train_pos	./include/project/zx_project_track_sensing.h	/^   } zx_train_pos;$/;"	t	typeref:struct:__anon11
+zx_train_route	./include/project/backup/zx_track_sensing.h	/^   } zx_train_route;$/;"	t	typeref:struct:__anon28
+zx_train_route	./include/project/zx_project_track_sensing.h	/^   } zx_train_route;$/;"	t	typeref:struct:__anon14
+zx_train_stop_request	./include/project/backup/zx_track_sensing.h	/^   }zx_train_stop_request;$/;"	t	typeref:struct:__anon30
+zx_train_stop_request	./include/project/zx_project_track_sensing.h	/^   }zx_train_stop_request;$/;"	t	typeref:struct:__anon16
+zx_train_target	./include/project/backup/zx_track_sensing.h	/^   } zx_train_target;$/;"	t	typeref:struct:__anon26
+zx_train_target	./include/project/zx_project_track_sensing.h	/^   } zx_train_target;$/;"	t	typeref:struct:__anon12
+zx_turnout_state	./include/project/backup/zx_track_sensing.h	/^   } zx_turnout_state;$/;"	t	typeref:struct:__anon33
+zx_turnout_state	./include/project/zx_project_track_sensing.h	/^   } zx_turnout_state;$/;"	t	typeref:struct:__anon19
+zx_uart1_rx_notifier	./src/kernel/zx_uart1_receive_server.c	/^void zx_uart1_rx_notifier()$/;"	f
+zx_uart1_rx_server	./src/kernel/zx_uart1_receive_server.c	/^void zx_uart1_rx_server()$/;"	f
+zx_uart1_tx_notifier	./src/kernel/zx_uart1_transmit_server.c	/^void zx_uart1_tx_notifier()$/;"	f
+zx_uart1_tx_server	./src/kernel/zx_uart1_transmit_server.c	/^void zx_uart1_tx_server()$/;"	f
+zx_uart2_request	./include/kernel/zx_tasks.h	/^       } zx_uart2_request;       $/;"	t	typeref:struct:__anon8
+zx_uart2_rx_notifier	./src/kernel/zx_uart2_receive_server.c	/^void zx_uart2_rx_notifier()$/;"	f
+zx_uart2_rx_notifier	./src/kernel/zx_uart_server.c	/^void zx_uart2_rx_notifier()$/;"	f
+zx_uart2_rx_server	./src/kernel/zx_uart2_receive_server.c	/^void zx_uart2_rx_server()$/;"	f
+zx_uart2_rx_server	./src/kernel/zx_uart_server.c	/^void zx_uart2_rx_server()$/;"	f
+zx_uart2_tx_notifier	./src/kernel/zx_uart2_transmit_server.c	/^void zx_uart2_tx_notifier()$/;"	f
+zx_uart2_tx_server	./src/kernel/zx_uart2_transmit_server.c	/^void zx_uart2_tx_server()$/;"	f
+zx_uart_request	./include/kernel/zx_tasks.h	/^       } zx_uart_request;$/;"	t	typeref:struct:__anon7
+zx_ui2a	./src/kernel/zx_uart_io.c	/^void zx_ui2a( unsigned int num, unsigned int base, char *bf ) {$/;"	f
+zx_ui_input_task	./src/project/zx_project_ui.c	/^void zx_ui_input_task()$/;"	f
+zx_ui_request	./include/project/backup/zx_track_sensing.h	/^   } zx_ui_request;$/;"	t	typeref:struct:__anon32
+zx_ui_request	./include/project/zx_project_track_sensing.h	/^   } zx_ui_request;$/;"	t	typeref:struct:__anon18
+zx_ui_server_task	./src/project/zx_project_ui.c	/^void zx_ui_server_task()$/;"	f
+zx_vic_disable_all_interrupts	./src/kernel/zx_irq_vic.c	/^void zx_vic_disable_all_interrupts()$/;"	f
+zx_vic_disable_interrupt	./src/kernel/zx_irq_vic.c	/^void zx_vic_disable_interrupt( int intr_number )$/;"	f
+zx_vic_enable_all_interrupts	./src/kernel/zx_irq_vic.c	/^void zx_vic_enable_all_interrupts()$/;"	f
+zx_vic_enable_interrupt	./src/kernel/zx_irq_vic.c	/^void zx_vic_enable_interrupt( int intr_number )$/;"	f
+zx_waypoint	./include/project/backup/zx_track_sensing.h	/^   } zx_waypoint;$/;"	t	typeref:struct:__anon27
+zx_waypoint	./include/project/zx_project_track_sensing.h	/^   } zx_waypoint;$/;"	t	typeref:struct:__anon13
+zx_write_byte	./src/kernel/zx_uart_io.c	/^int zx_write_byte( int channel, char c )$/;"	f

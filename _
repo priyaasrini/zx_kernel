@@ -1,0 +1,671 @@
+/*
+ * zx_irq.c
+ *
+ * File containing handling IRQs
+ *
+ * Authors : Alex Murashkin
+ *           Priyaa Varshinee
+ */
+
+#include <ts7200.h>
+#include <zx_uart_io.h>
+#include <zx_irq.h>
+#include <zx_kernel_config.h>
+#include <zx_tasks.h>
+#include <zx_helper.h>
+#include <zx_ready_queue.h>
+#include <zx_timer.h>
+
+
+void zx_reset_all_interrupts()
+{
+   zx_vic_disable_all_interrupts();
+
+   zx_device_intr_disable_all();
+   
+   zx_device_intr_clear_all(); 
+}
+
+void zx_device_intr_disable_all()
+{
+   zx_device_intr_off( INTR_SOURCE_TIMER_1 );
+   zx_device_intr_off( INTR_SOURCE_UART1_TX );
+   zx_device_intr_off( INTR_SOURCE_UART1_MODEM );
+   zx_device_intr_off( INTR_SOURCE_UART2_TX );
+   zx_device_intr_off( INTR_SOURCE_UART1_RX );
+   zx_device_intr_off( INTR_SOURCE_UART2_RX );  
+}
+
+/*
+ * Disable all interrupts
+ */
+void zx_vic_disable_all_interrupts()
+{
+   int* addr = (int*)(VIC1_BASE + IRQ_INTR_CLEAR_OFFSET);
+   *addr = 0xffffffff;
+   
+   addr = (int*)(VIC2_BASE + IRQ_INTR_CLEAR_OFFSET);
+   *addr = 0xffffffff;      
+}
+
+/* 
+ * Enable interrupts from all device 
+ */
+void zx_vic_enable_all_interrupts()
+{
+  /* to make sure, disabling all other interrupts */
+  zx_vic_disable_all_interrupts();
+  
+  /* Enable Timer Interrupt */
+  zx_vic_enable_interrupt(INTR_SOURCE_TIMER_1);
+  
+  /* UART2 Interrupts */
+  zx_vic_enable_interrupt(INTR_SOURCE_UART_2);  
+  
+  /* UART1 Interrupts */
+  zx_vic_enable_interrupt(INTR_SOURCE_UART_1);  
+}
+
+/* Use this function when you just received a interrupt
+   from one of the devices and yet to handle it. So we
+   clear the bit of INTR_ENABLE register, so that we ll
+   not be notified for any more interrupts from this device
+ */
+void zx_vic_disable_interrupt( int intr_number )
+{
+   int offset;
+   int bit;
+   
+   if (intr_number < 32)
+   {
+      offset = VIC1_BASE + IRQ_INTR_CLEAR_OFFSET;
+      bit = intr_number;   
+   }
+   else
+   {
+      offset = VIC2_BASE + IRQ_INTR_CLEAR_OFFSET;
+      bit = intr_number - 32;   
+   }
+
+   int* addr = (int*)(offset);
+   int value = *addr;
+   
+   value |= (1 << bit);
+   *addr = value;
+}
+
+/* 
+   Use this function to enable servicing ofinterupts from
+   a particular source
+ */
+void zx_vic_enable_interrupt( int intr_number )
+{
+   int offset;
+   int bit;  
+   
+   if (intr_number < 32)
+   {
+      offset = VIC1_BASE + IRQ_INTR_ENABLE_OFFSET;
+      bit = intr_number;   
+   }
+   else
+   {
+      offset = VIC2_BASE + IRQ_INTR_ENABLE_OFFSET;
+      bit = intr_number - 32;   
+   }
+ 
+   int* addr = (int*)(offset);
+   int value = *addr;
+   
+   value |= (1 << bit);
+   *addr = value;  
+}
+
+
+//==========================================
+/*
+   DEVICE-SPECIFIC CODE BEGINS
+ */
+//==========================================
+ 
+// NOW BY DEVICE WE MEAN LOGICAL DEVICES, like transmitter and receiver for each UART
+
+/*
+   Clear Interrupt lines
+ */
+void zx_clear_interrupt_line_of_devices()
+{
+   zx_device_intr_clear( INTR_SOURCE_TIMER_1 );
+   zx_device_intr_clear( INTR_SOURCE_UART1_TX );
+   zx_device_intr_clear( INTR_SOURCE_UART1_MODEM );
+   zx_device_intr_clear( INTR_SOURCE_UART2_TX );
+   zx_device_intr_clear( INTR_SOURCE_UART1_RX );
+   zx_device_intr_clear( INTR_SOURCE_UART2_RX );
+}
+
+/* 
+   A device just generated interrupt. You ve received notification
+   Clear the interrupt line of the device
+ */
+void zx_device_intr_clear( int device_number)
+{
+   int *addr;
+   switch( device_number )
+   {
+      case INTR_SOURCE_TIMER_1:
+         addr = (int*)(TIMER_1 + TIMER_CLEAR_OFFSET);
+         *addr = 121112121; 
+         break;
+         
+     /* This interrupt is cleared automatically
+        when we read the character 
+      */
+      case INTR_SOURCE_UART2_RX:
+      case INTR_SOURCE_UART1_RX:
+         break;
+
+
+     /* These interrupts are  cleared automatically
+        when a character is transmitted 
+      */
+      case INTR_SOURCE_UART1_TX:
+      case INTR_SOURCE_UART2_TX:
+         break;
+         
+      case INTR_SOURCE_UART1_MODEM:
+         addr  = (int*)(UART1_STATUS);
+         *addr = (*addr) & (~MIS_MASK); 
+         break;
+   }
+}
+
+void zx_device_init( int device_number)
+{
+   switch( device_number )
+   {
+      case INTR_SOURCE_TIMER_1:
+         // somebody might have already switched it on :) 
+         zx_timer_disable( IRQ_TIMER ); 
+         
+         zx_timer_load_val( IRQ_TIMER, ONE_TICK );
+         zx_timer_set_periodic( IRQ_TIMER, ON );            
+         zx_timer_select_clock( IRQ_TIMER, TIMER_508KHZ_CLKSEL_MASK ); 
+         zx_timer_enable( IRQ_TIMER );
+         break;
+         
+      default :
+         break;
+   }
+   
+   /* we do nothing but turn interrupts on for the logical devices: */
+   zx_device_intr_on( device_number );
+}
+
+void zx_device_free( int device_number)
+{
+   int *addr;
+   int value;
+   
+   switch( device_number )
+   {
+      case INTR_SOURCE_TIMER_1:
+         zx_timer_disable( IRQ_TIMER );
+         break;
+         
+      case INTR_SOURCE_UART1_RX:
+         addr = (int*)(UART1_CONTROL);
+         value = *addr;
+         *addr = (value & (~RIE_MASK)); 
+         break;
+
+      case INTR_SOURCE_UART2_RX:
+         addr = (int*)(UART2_CONTROL);
+         value = *addr;
+         *addr = (value & (~RIE_MASK)); 
+         break;
+
+      case INTR_SOURCE_UART1_TX:
+         addr = (int*)(UART1_CONTROL);
+         value = *addr;
+         *addr = (value & (~TIE_MASK)); 
+         break;
+
+      case INTR_SOURCE_UART2_TX:
+         addr = (int*)(UART2_CONTROL);
+         value = *addr;
+         *addr = (value & (~TIE_MASK));          
+         break;
+   }
+}
+
+
+void zx_device_intr_off( int device_number )
+{
+   int *addr;
+   int value;
+   
+   switch( device_number )
+   {
+      case INTR_SOURCE_TIMER_1:
+         zx_vic_disable_interrupt( INTR_SOURCE_TIMER_1 );
+         break;
+         
+      case INTR_SOURCE_UART1_RX:
+         addr = (int*)(UART1_CONTROL);
+         value = *addr;
+         *addr = (value & (~RIE_MASK)); 
+         break;
+
+      case INTR_SOURCE_UART2_RX:
+         addr = (int*)(UART2_CONTROL);
+         value = *addr;
+         *addr = (value & (~RIE_MASK)); 
+         break;
+         
+/* ----------- UART1 TRANSMIT ----------------*/
+      case INTR_SOURCE_UART1_TX:
+         addr = (int*)(UART1_CONTROL);
+         value = *addr;
+         *addr = (value & (~TIE_MASK)); 
+         break;
+         
+      case INTR_SOURCE_UART1_MODEM:
+         addr  = (int*)(UART1_CONTROL);
+         value = *addr;
+         *addr = (value & (~MIE_MASK));
+         break;
+/* -----------------------------------------*/
+         
+      case INTR_SOURCE_UART2_TX:
+         addr = (int*)(UART2_CONTROL);
+         value = *addr;
+         *addr = (value & (~TIE_MASK));  
+         break;
+      
+   }            
+   
+}
+
+void zx_device_intr_on( int device_number )
+{
+   int *addr;
+   int value;
+   
+   switch( device_number )
+   {
+      case INTR_SOURCE_TIMER_1:
+         zx_vic_enable_interrupt( INTR_SOURCE_TIMER_1 );
+         break;
+         
+      case INTR_SOURCE_UART1_RX:
+         addr = (int*)(UART1_CONTROL);
+         value = *addr;
+         *addr = (value | RIE_MASK); 
+         break;
+
+      case INTR_SOURCE_UART2_RX:
+         addr = (int*)(UART2_CONTROL);
+         value = *addr;        
+         *addr = (value | RIE_MASK); 
+         break;
+         
+/* ----------- UART1 TRANSMIT ----------------*/
+      case INTR_SOURCE_UART1_TX:
+         addr = (int*)(UART1_CONTROL);
+         value = *addr;
+         *addr = (value | TIE_MASK); 
+         break;
+         
+      case INTR_SOURCE_UART1_MODEM:
+         addr = (int*)(UART1_CONTROL);
+         value = *addr;
+         *addr = (value | MIE_MASK);
+         break;
+/* -----------------------------------------*/
+
+      case INTR_SOURCE_UART2_TX:
+         addr = (int*)(UART2_CONTROL);
+         value = *addr;
+         *addr = (value | TIE_MASK);          
+         break;
+   }
+}
+
+/*
+ * Handling an interrupt from the timer
+ * TODO Need to speak with Alex : Instructor hardware interrupt
+ * handler returns nothing
+ */
+void zx_handle_timer_interrupt(int make_default)
+{ 
+   /* Clear the interrupt line of the timer */
+   zx_device_intr_clear (INTR_SOURCE_TIMER_1 );
+
+   int tid;
+   
+   int* addr = (int*)(AWAIT_TIMER_TID);         
+   tid = *addr;      
+   
+   if (tid == INVALID_TASK_ID)
+   {
+      /* bwprintf(COM2, "zx_handle_timer_interrupt: Invalid task id."); */
+      return;
+   }
+
+   zx_td* td = zx_get_td(tid);
+   
+   td->state = TASK_STATE_READY;   
+   
+   if (make_default == 1)
+   {
+      td->return_value = -1;
+   }
+   else
+   {
+      td->return_value = 0;
+   }
+   zx_q_append_to_end( tid, td->priority );
+   
+   /* resetting the task id */
+   addr = (int*)(AWAIT_TIMER_TID); 
+   *addr = INVALID_TASK_ID;
+   
+   if( !make_default )
+      zx_device_intr_on(INTR_SOURCE_TIMER_1);   
+}
+
+/*
+   Initialize the data required for the UART1 and MDOEM interrupts: 
+   CTS state, old flags state and TXFE state
+*/
+
+void zx_init_modem_intr()
+{
+   // set addresses
+   int* uart_flag_addr = (int*)VAR_OLD_UART1_FLAG;
+   int* cts_addr       = (int*)VAR_MODEM_CTS_ON;
+   int* txfe_addr      = (int*)VAR_TXFE_ON;
+   
+   // get current UART1 flags
+   int *uart1_flags =    (int*)( UART1_BASE + UART_FLAG_OFFSET);
+   
+   // set everything
+   *uart_flag_addr     = *uart1_flags;
+   *cts_addr           = (*uart1_flags) & 0x01;
+   *txfe_addr          = 0;
+} 
+
+/*
+ * Handling a transmit interrupt from UART1 and Modem interrupts
+ * If both conditions are satisfied (CTS is tunred to on and TXFE)
+ * Then wake the task up
+ */
+ 
+void zx_handle_uart1_transmit_interrupt(int source, int make_default)
+{
+   // getting required addresses
+   int* uart_flag_addr  = (int*)VAR_OLD_UART1_FLAG;
+   int* cts_addr        = (int*)VAR_MODEM_CTS_ON;
+   int* txfe_addr       = (int*)VAR_TXFE_ON;
+   
+   // defining variables for uart1 and modem data
+   int old_uart_flag;
+   int cts;      
+   int txfe;
+
+   int *uart1_flags = (int*)( UART1_BASE + UART_FLAG_OFFSET);
+
+   int new_uart_flag;
+
+   cts = *cts_addr;
+   txfe = *txfe_addr; 
+   
+   // for debugging
+   int *temp_addr = (int*)(TEMP_VAR );     
+
+   switch(source)
+   {
+      case INTR_SOURCE_UART1_TX:
+      // if we got the TXFE interrupt
+      
+         zx_device_intr_off(source); // switch TXFE interrupt off
+         
+         txfe = 1;            // set TXFE to 1
+         *txfe_addr = txfe;   // and store it at the address
+         break;
+
+      case INTR_SOURCE_UART1_MODEM:
+      // if we got the modem interrupt 
+        
+         // clearing modem interrupt has been done before
+         // we are losing interrupts if we clear it here
+         // because the modem interrupts are very fast
+         
+         *temp_addr = (*temp_addr) + 1; // debug: counting interrupts
+         
+         
+         old_uart_flag = *uart_flag_addr;
+         new_uart_flag = *uart1_flags; 
+         
+         // check if CTS has been switched from 0 to 1
+         if (((old_uart_flag &  0x1) == 0) && ((new_uart_flag &  0x1) == 1))
+         { 
+   	      cts = 1;	// if yes, set the switch to 1
+         }   
+         else
+         {
+            cts = 0; // if not, switch to 0
+         }
+         
+         *uart_flag_addr = new_uart_flag; // store new values of flags
+         *cts_addr = cts;                 // and cts switch
+         
+         break;
+      /*------------------------------------------------*/   
+   }
+
+   // if not both cts and txfe 
+   if (!((cts == 1) && (txfe == 1)))
+      return; // the exit
+      
+   // if we entered here, it means all the conditions for transmitting are satisfied
+
+   *cts_addr = 0;
+   *txfe_addr = 0;       
+
+   // we never turn modem interrupts off. They must be on all the time
+
+   // awake the task
+   int* addr = (int*)(AWAIT_UART1_TX_TID);         
+   int tid = *addr;  
+   
+   if (tid == INVALID_TASK_ID)
+   {
+      return;
+   }
+
+   zx_td* td = zx_get_td(tid);
+   
+   td->state = TASK_STATE_READY;      
+   if (make_default == 1)
+   {
+      td->return_value = -1;
+   }
+   else
+   {
+      td->return_value = 0;
+   }
+   
+   zx_q_append_to_end( tid, td->priority );
+   
+   /* resetting the task id */
+   addr = (int*)(AWAIT_UART1_TX_TID); 
+   *addr = INVALID_TASK_ID;
+   
+}
+ 
+void zx_handle_uart_interrupt(int source, int make_default)
+{
+   int tid = 0;
+   int task_pointer = 0;
+   int return_value = 0;
+
+   zx_device_intr_off(source);
+     
+   switch(source)
+   {
+      /* FOR UART1 transmit, we handle two interrupts
+         maintaining a state according to the interrupts
+         generated. So we send back to the notifiter
+         the specific interrupt of the two
+       */
+
+      case INTR_SOURCE_UART1_RX:
+         return_value = zx_read_byte(COM1);
+         task_pointer = AWAIT_UART1_RX_TID;
+         break;
+      case INTR_SOURCE_UART2_TX:
+         task_pointer = AWAIT_UART2_TX_TID;
+         break;
+      case INTR_SOURCE_UART2_RX:
+         return_value = zx_read_byte(COM2);      
+         task_pointer = AWAIT_UART2_RX_TID;
+         break;  
+   }   
+   
+   int* addr = (int*)(task_pointer);         
+   tid = *addr;  
+   
+   if (tid == INVALID_TASK_ID)
+   {
+    //  bwprintf(COM2, "zx_handle_uart_interrupt: Invalid task id. Source: %d", source);
+      return;
+   }
+
+   zx_td* td = zx_get_td(tid);
+   
+   td->state = TASK_STATE_READY;      
+   if (make_default == 1)
+   {
+      td->return_value = -1;
+   }
+   else
+   {
+      td->return_value = return_value;
+   }
+   
+   zx_q_append_to_end( tid, td->priority );
+   
+   /* resetting the task id */
+   addr = (int*)(task_pointer); 
+   *addr = INVALID_TASK_ID;
+}
+
+/*
+ * Find the source from which the interrupt 
+ * was received EVENT_UART1_TX);
+      
+ */
+int zx_get_interrupt_source()
+{
+   /* Read interrupt status register */
+   int* addr = (int*)(VIC1_BASE + IRQ_STATUS_OFFSET);
+   int value1 = *addr;
+
+   addr = (int*)(VIC2_BASE + IRQ_STATUS_OFFSET);
+   int value2 = *addr;
+   
+   int device_number = 0;
+   
+   
+   /* Check if its timer */
+   if ((value1 & TIMER1_INTR_MASK) > 0)
+   {
+      device_number = INTR_SOURCE_TIMER_1;
+   }
+   
+   /* Check if its from UART1 */
+   else if ((value2 & UART1_INTR_MASK) > 0)
+   {
+   
+      int* device_status_addr = (int*)(UART1_STATUS);
+      int dev_value = *device_status_addr;        
+         
+      /* Modem status change interrupt from device */
+      if ((dev_value & MIS_MASK) > 0) // transmit
+      {
+         device_number = INTR_SOURCE_UART1_MODEM;
+         
+         zx_device_intr_clear (INTR_SOURCE_UART1_MODEM);  
+         
+//         int *temp_addr = (int*)(TEMP_VAR);
+//         *temp_addr = 0x12345678;
+      }
+         
+      /* receive interrupt inside device */
+      else if ((dev_value & RIS_MASK) > 0) // receive
+         device_number = INTR_SOURCE_UART1_RX;
+         
+      /* transmit FIFO empty interrupt from device */
+      else if ((dev_value & TIS_MASK) > 0) // transmit
+      {
+       //  int *addr  = (int*)(UART1_STATUS);
+       //  int *taddr = (int*)(TEMP_VAR);
+        // *taddr = *addr; 
+         
+         device_number = INTR_SOURCE_UART1_TX;
+      }
+   }
+   
+    /* Check if its from UART2 */
+   else if ((value2 & UART2_INTR_MASK) > 0)
+   {
+      int* device_status_addr = (int*)(UART2_STATUS);
+      int dev_value = *device_status_addr;    
+   
+      /* receive interrupt inside device */
+      if ((dev_value & RIS_MASK) > 0) // receive
+      {
+         device_number = INTR_SOURCE_UART2_RX;
+      }
+      
+      /* transmit FIFO empty interrupt from device */
+      else if ((dev_value & TIS_MASK) > 0) // transmit
+      {
+         device_number = INTR_SOURCE_UART2_TX;
+      }  
+      else
+      { 
+//         bwprintf(COM2, "Error: UART2 unrecognized interrupt. Status: %x. Control: %x. \n", dev_value, *((int*)(UART2_CONTROL)));
+      }
+   }
+
+   /* Alex we are not supposed to do it here
+      See notifier code to UART2 rtransmit 
+      Each handler should handle this
+      
+      Switch off the interrupt from device 
+      at place where the source is requested
+
+      Clear the interrupt line in the device 
+      in the respective handler/notifier/as needed 
+   */
+#if 0
+   if (device_number != 0)
+   { 
+      /* As soon as you find the source of the interrupt,
+       * disable any more interrupts from that device,
+       * and clear the interrupt line of the device
+       */
+
+
+      zx_device_intr_off( device_number );
+      zx_device_intr_clear ( device_number );
+
+
+ //     bwprintf(COM2, "Device: %d", device_number);              
+   }
+#endif    
+   return device_number;
+
+}

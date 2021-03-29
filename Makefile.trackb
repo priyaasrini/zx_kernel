@@ -1,0 +1,241 @@
+#
+# Makefile for zx_kernel_tracka
+#
+XCC     =  /u/wbcowan/gnuarm-4.0.2/arm-elf/bin/gcc
+AS	     =  /u/wbcowan/gnuarm-4.0.2/arm-elf/bin/as
+LD      =  /u/wbcowan/gnuarm-4.0.2/arm-elf/bin/ld
+CFLAGS  =  -c -fPIC -Wall -I. -I/u0/wbcowan/cs452/io/include -I./include/kernel -I./include/project -I./src -mcpu=arm920t -msoft-float
+
+# -g: include hooks for gdb
+# -c: only compile
+# -mcpu=arm920t: generate code for the 920t architecture
+# -fpic: emit position-independent code
+# -Wall: report all warnings
+
+ASFLAGS	= -mcpu=arm920t -mapcs-32
+# -mapcs: always generate a complete stack frame
+
+LDFLAGS = -init test -Map test.map -N  -T ./bin/orex.ld -L/u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2 -L/u0/wbcowan/cs452/io/lib -L/u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2 
+
+all:  zx_milestone_2_track_b.elf  
+
+zx_milestone_2_track_b.elf: zx_kernel_head.o zx_kernel_body.o zx_system_calls.o zx_system_call_handlers.o zx_ready_queue.o zx_memory.o zx_helper.o zx_receive_queue.o zx_testing.o zx_ns_tree.o zx_ns.o zx_irq_vic.o zx_clock_server.o zx_clockserver_heap.o zx_timer.o zx_queue.o zx_uart2_transmit_server.o zx_uart_io.o zx_uart2_receive_server.o zx_uart1_transmit_server.o zx_uart1_receive_server.o zx_irq_device.o zx_project_graphics.o zx_project_utilities.o zx_project_track_sensing.o zx_project_track_data.o zx_project_shortest_path.o zx_project_calibration.o zx_project_train_functions.o zx_project_ui.o zx_project_track_functions.o zx_project_sensor.o zx_project_path_reservation.o zx_project_test_functions.o
+
+	$(LD) $(LDFLAGS) -o zx_milestone_2_track_b.elf $@  ./obj/zx_kernel_head.o ./obj/zx_kernel_body.o ./obj/zx_system_calls.o ./obj/zx_system_call_handlers.o ./obj/zx_ready_queue.o ./obj/zx_memory.o ./obj/zx_helper.o ./obj/zx_receive_queue.o ./obj/zx_testing.o ./obj/zx_ns_tree.o ./obj/zx_ns.o ./obj/zx_irq_vic.o ./obj/zx_clock_server.o ./obj/zx_clockserver_heap.o ./obj/zx_timer.o ./obj/zx_queue.o ./obj/zx_uart2_transmit_server.o ./obj/zx_uart1_transmit_server.o ./obj/zx_uart_io.o ./obj/zx_uart2_receive_server.o ./obj/zx_uart1_receive_server.o ./obj/zx_irq_device.o ./obj/zx_project_graphics.o ./obj/zx_project_utilities.o ./obj/zx_project_track_sensing.o ./obj/zx_project_track_data.o ./obj/zx_project_shortest_path.o  ./obj/zx_project_calibration.o ./obj/zx_project_train_functions.o ./obj/zx_project_ui.o ./obj/zx_project_track_functions.o ./obj/zx_project_sensor.o ./obj/zx_project_path_reservation.o ./obj/zx_project_test_functions.o -lbwio -lgcc 
+	mv *.elf ./bin/
+	mv *.map ./bin/
+
+zx_kernel_head.o: zx_kernel_head.s
+	$(AS) $(ASFLAGS) -o ./obj/zx_kernel_head.o ./asm/zx_kernel_head.s
+
+zx_kernel_body.o: zx_kernel_body.s 
+	$(AS) $(ASFLAGS) -o ./obj/zx_kernel_body.o ./asm/zx_kernel_body.s
+
+zx_system_calls.o: zx_system_calls.s 
+	$(AS) $(ASFLAGS) -o ./obj/zx_system_calls.o ./asm/zx_system_calls.s
+	
+zx_system_call_handlers.o: zx_system_call_handlers.s 
+	$(AS) $(ASFLAGS) -o ./obj/zx_system_call_handlers.o ./asm/zx_system_call_handlers.s
+	
+zx_helper.o: zx_helper.s 
+	$(AS) $(ASFLAGS) -o ./obj/zx_helper.o ./asm/zx_helper.s
+
+zx_memory.o: zx_memory.s 
+	$(AS) $(ASFLAGS) -o ./obj/zx_memory.o ./asm/zx_memory.s
+	
+zx_ready_queue.o: zx_ready_queue.s 
+	$(AS) $(ASFLAGS) -o ./obj/zx_ready_queue.o ./asm/zx_ready_queue.s
+	
+zx_receive_queue.o: zx_receive_queue.s 
+	$(AS) $(ASFLAGS) -o ./obj/zx_receive_queue.o ./asm/zx_receive_queue.s
+	
+zx_testing.o: zx_testing.s 
+	$(AS) $(ASFLAGS) -o ./obj/zx_testing.o ./asm/zx_testing.s
+		
+zx_ns_tree.o: zx_ns_tree.s 
+	$(AS) $(ASFLAGS) -o ./obj/zx_ns_tree.o ./asm/zx_ns_tree.s		
+		
+zx_ns.o: zx_ns.s 
+	$(AS) $(ASFLAGS) -o ./obj/zx_ns.o ./asm/zx_ns.s	
+		
+zx_irq_vic.o: zx_irq_vic.s 
+	$(AS) $(ASFLAGS) -o ./obj/zx_irq_vic.o ./asm/zx_irq_vic.s		
+	
+zx_irq_device.o: zx_irq_device.s 
+	$(AS) $(ASFLAGS) -o ./obj/zx_irq_device.o ./asm/zx_irq_device.s	
+			
+zx_clock_server.o: zx_clock_server.s 
+	$(AS) $(ASFLAGS) -o ./obj/zx_clock_server.o ./asm/zx_clock_server.s	
+
+zx_clockserver_heap.o: zx_clockserver_heap.s 
+	$(AS) $(ASFLAGS) -o ./obj/zx_clockserver_heap.o ./asm/zx_clockserver_heap.s	
+
+zx_timer.o: zx_timer.s 
+	$(AS) $(ASFLAGS) -o ./obj/zx_timer.o ./asm/zx_timer.s	
+
+zx_uart2_transmit_server.o: zx_uart2_transmit_server.s
+	$(AS) $(ASFLAGS) -o ./obj/zx_uart2_transmit_server.o ./asm/zx_uart2_transmit_server.s
+	
+zx_uart1_transmit_server.o: zx_uart1_transmit_server.s
+	$(AS) $(ASFLAGS) -o ./obj/zx_uart1_transmit_server.o ./asm/zx_uart1_transmit_server.s
+
+zx_uart2_receive_server.o: zx_uart2_receive_server.s
+	$(AS) $(ASFLAGS) -o ./obj/zx_uart2_receive_server.o ./asm/zx_uart2_receive_server.s
+
+zx_uart1_receive_server.o: zx_uart1_receive_server.s
+	$(AS) $(ASFLAGS) -o ./obj/zx_uart1_receive_server.o ./asm/zx_uart1_receive_server.s
+
+zx_queue.o: zx_queue.s 
+	$(AS) $(ASFLAGS) -o ./obj/zx_queue.o ./asm/zx_queue.s	
+
+zx_uart_io.o: zx_uart_io.s 
+	$(AS) $(ASFLAGS) -o ./obj/zx_uart_io.o ./asm/zx_uart_io.s	
+	
+zx_project_graphics.o: zx_project_graphics.s 
+	$(AS) $(ASFLAGS) -o ./obj/zx_project_graphics.o ./asm/zx_project_graphics.s
+	
+zx_project_utilities.o: zx_project_utilities.s 
+	$(AS) $(ASFLAGS) -o ./obj/zx_project_utilities.o ./asm/zx_project_utilities.s
+
+zx_project_track_sensing.o: zx_project_track_sensing.s 
+	$(AS) $(ASFLAGS) -o ./obj/zx_project_track_sensing.o ./asm/zx_project_track_sensing.s	
+	
+zx_project_track_data.o: zx_project_track_data.s 
+	$(AS) $(ASFLAGS) -o ./obj/zx_project_track_data.o ./asm/zx_project_track_data.s	
+
+zx_project_shortest_path.o: zx_project_shortest_path.s 
+	$(AS) $(ASFLAGS) -o ./obj/zx_project_shortest_path.o ./asm/zx_project_shortest_path.s	
+	
+zx_project_calibration.o: zx_project_calibration.s 
+	$(AS) $(ASFLAGS) -o ./obj/zx_project_calibration.o ./asm/zx_project_calibration.s	
+
+zx_project_train_functions.o: zx_project_train_functions.s 
+	$(AS) $(ASFLAGS) -o ./obj/zx_project_train_functions.o ./asm/zx_project_train_functions.s	
+
+zx_project_ui.o: zx_project_ui.s 
+	$(AS) $(ASFLAGS) -o ./obj/zx_project_ui.o ./asm/zx_project_ui.s	
+
+zx_project_track_functions.o: zx_project_track_functions.s 
+	$(AS) $(ASFLAGS) -o ./obj/zx_project_track_functions.o ./asm/zx_project_track_functions.s	
+	
+zx_project_sensor.o: zx_project_sensor.s 
+	$(AS) $(ASFLAGS) -o ./obj/zx_project_sensor.o ./asm/zx_project_sensor.s		
+
+zx_project_path_reservation.o: zx_project_path_reservation.s
+	$(AS) $(ASFLAGS) -o ./obj/zx_project_path_reservation.o ./asm/zx_project_path_reservation.s
+
+zx_project_test_functions.o: zx_project_test_functions.s
+	$(AS) $(ASFLAGS) -o ./obj/zx_project_test_functions.o ./asm/zx_project_test_functions.s	
+
+
+
+
+zx_kernel_head.s: ./src/kernel/zx_kernel_head.c  
+	$(XCC) -S $(CFLAGS) -o ./asm/zx_kernel_head.s ./src/kernel/zx_kernel_head.c
+
+zx_kernel_body.s: ./src/kernel/zx_kernel_body.c 
+	$(XCC) -S $(CFLAGS) -o ./asm/zx_kernel_body.s ./src/kernel/zx_kernel_body.c
+
+zx_system_calls.s: ./src/kernel/zx_system_calls.c 
+	$(XCC) -S $(CFLAGS) -o ./asm/zx_system_calls.s ./src/kernel/zx_system_calls.c
+	
+zx_system_call_handlers.s: ./src/kernel/zx_system_call_handlers.c
+	$(XCC) -S $(CFLAGS) -o ./asm/zx_system_call_handlers.s ./src/kernel/zx_system_call_handlers.c
+	
+zx_helper.s: ./src/kernel/zx_helper.c 
+	$(XCC) -S $(CFLAGS) -o ./asm/zx_helper.s ./src/kernel/zx_helper.c
+	
+zx_memory.s: ./src/kernel/zx_memory.c 
+	$(XCC) -S $(CFLAGS) -o ./asm/zx_memory.s ./src/kernel/zx_memory.c
+
+zx_ready_queue.s: ./src/kernel/zx_ready_queue.c 
+	$(XCC) -S $(CFLAGS) -o ./asm/zx_ready_queue.s ./src/kernel/zx_ready_queue.c 
+	
+zx_receive_queue.s: ./src/kernel/zx_receive_queue.c 
+	$(XCC) -S $(CFLAGS) -o ./asm/zx_receive_queue.s ./src/kernel/zx_receive_queue.c
+
+zx_testing.s: ./src/kernel/zx_testing.c 
+	$(XCC) -S $(CFLAGS) -o ./asm/zx_testing.s ./src/kernel/zx_testing.c
+
+zx_ns_tree.s: ./src/kernel/zx_ns_tree.c 
+	$(XCC) -S $(CFLAGS) -o ./asm/zx_ns_tree.s ./src/kernel/zx_ns_tree.c
+	
+zx_ns.s: ./src/kernel/zx_ns.c 
+	$(XCC) -S $(CFLAGS) -o ./asm/zx_ns.s ./src/kernel/zx_ns.c
+	
+zx_irq_device.s: ./src/kernel/zx_irq_device.c 
+	$(XCC) -S $(CFLAGS) -o ./asm/zx_irq_device.s ./src/kernel/zx_irq_device.c
+		
+zx_irq_vic.s: ./src/kernel/zx_irq_vic.c 
+	$(XCC) -S $(CFLAGS) -o ./asm/zx_irq_vic.s ./src/kernel/zx_irq_vic.c
+		
+zx_clock_server.s: ./src/kernel/zx_clock_server.c 
+	$(XCC) -S $(CFLAGS) -o ./asm/zx_clock_server.s ./src/kernel/zx_clock_server.c	
+	
+zx_clockserver_heap.s: ./src/kernel/zx_clockserver_heap.c 
+	$(XCC) -S $(CFLAGS) -o ./asm/zx_clockserver_heap.s ./src/kernel/zx_clockserver_heap.c	
+	
+zx_timer.s: ./src/kernel/zx_timer.c 
+	$(XCC) -S $(CFLAGS) -o ./asm/zx_timer.s ./src/kernel/zx_timer.c	
+
+zx_uart2_transmit_server.s: ./src/kernel/zx_uart2_transmit_server.c
+	$(XCC) -S $(CFLAGS) -o ./asm/zx_uart2_transmit_server.s ./src/kernel/zx_uart2_transmit_server.c
+	
+zx_uart1_transmit_server.s: ./src/kernel/zx_uart1_transmit_server.c
+	$(XCC) -S $(CFLAGS) -o ./asm/zx_uart1_transmit_server.s ./src/kernel/zx_uart1_transmit_server.c
+
+zx_uart2_receive_server.s: ./src/kernel/zx_uart2_receive_server.c
+	$(XCC) -S $(CFLAGS) -o ./asm/zx_uart2_receive_server.s ./src/kernel/zx_uart2_receive_server.c
+	
+zx_uart1_receive_server.s: ./src/kernel/zx_uart1_receive_server.c
+	$(XCC) -S $(CFLAGS) -o ./asm/zx_uart1_receive_server.s ./src/kernel/zx_uart1_receive_server.c
+	
+zx_queue.s: ./src/kernel/zx_queue.c 
+	$(XCC) -S $(CFLAGS) -o ./asm/zx_queue.s ./src/kernel/zx_queue.c
+
+zx_uart_io.s: ./src/kernel/zx_uart_io.c 
+	$(XCC) -S $(CFLAGS) -o ./asm/zx_uart_io.s ./src/kernel/zx_uart_io.c
+
+
+zx_project_graphics.s: ./src/project/zx_project_graphics.c 
+	$(XCC) -S $(CFLAGS) -o ./asm/zx_project_graphics.s ./src/project/zx_project_graphics.c
+	
+zx_project_utilities.s: ./src/project/zx_project_utilities.c 
+	$(XCC) -S $(CFLAGS) -o ./asm/zx_project_utilities.s ./src/project/zx_project_utilities.c
+		
+zx_project_track_sensing.s: ./src/project/zx_project_track_sensing.c 
+	$(XCC) -S $(CFLAGS) -o ./asm/zx_project_track_sensing.s ./src/project/zx_project_track_sensing.c
+
+zx_project_track_data.s: ./src/project/zx_project_track_data.c 
+	$(XCC) -S $(CFLAGS) -o  ./asm/zx_project_track_data.s ./src/project/zx_project_track_data.c
+
+zx_project_shortest_path.s: ./src/project/zx_project_shortest_path.c 
+	$(XCC) -S $(CFLAGS) -o  ./asm/zx_project_shortest_path.s ./src/project/zx_project_shortest_path.c
+	
+zx_project_calibration.s: ./src/project/zx_project_calibration.c 
+	$(XCC) -S $(CFLAGS) -o ./asm/zx_project_calibration.s ./src/project/zx_project_calibration.c
+	
+zx_project_train_functions.s: ./src/project/zx_project_train_functions.c 
+	$(XCC) -S $(CFLAGS) -o ./asm/zx_project_train_functions.s ./src/project/zx_project_train_functions.c
+	
+zx_project_ui.s: ./src/project/zx_project_ui.c 
+	$(XCC) -S $(CFLAGS) -o ./asm/zx_project_ui.s ./src/project/zx_project_ui.c
+	
+zx_project_track_functions.s: ./src/project/zx_project_track_functions.c 
+	$(XCC) -S $(CFLAGS) -o ./asm/zx_project_track_functions.s ./src/project/zx_project_track_functions.c
+		
+zx_project_sensor.s: ./src/project/zx_project_sensor.c 
+	$(XCC) -S $(CFLAGS) -o ./asm/zx_project_sensor.s ./src/project/zx_project_sensor.c
+
+zx_project_path_reservation.s: ./src/project/zx_project_path_reservation.c 
+	$(XCC) -S $(CFLAGS) -o ./asm/zx_project_path_reservation.s ./src/project/zx_project_path_reservation.c
+		
+zx_project_test_functions.s: ./src/project/zx_project_test_functions.c 
+	$(XCC) -S $(CFLAGS) -o ./asm/zx_project_test_functions.s ./src/project/zx_project_test_functions.c
+	
+upload: all
+	cp ./bin/zx_milestone_2_track_b.elf /u/cs452/tftp/ARM/AMURASHK/zx_milestone_2_track_b.elf	
+
+clean:
+	-rm -f ./bin/*.elf ./asm/*.s ./obj/*.o ./bin/*.map
+	-rm -f *.elf *.s *.o *.map
